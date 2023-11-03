@@ -1,0 +1,52 @@
+
+    /* HEADER - INDEX.HTML */
+
+body{
+    background: url(img/background-home-img.png);
+    margin: 2rem;
+    /*nao repetir imagem */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    width: 15rem;
+
+}
+
+.header .nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    margin-left: 2.5rem;
+}
+.header .nav .entrar{
+    border: 5px solid #F4BC33 ;
+    border-radius: 40px;
+    padding: 10px 40px 10px 40px; /*em cima - direita - embaixo - esquerda*/
+}
+
+    /* TEXTO - INDEX.HTML */
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-top: 150px;
+}
+.texto .headline{
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    margin-block-end: 0px;
+}
+.texto .descricao{
+    color: white;
+    font-size: 35px;
+}
