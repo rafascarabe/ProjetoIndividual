@@ -14,25 +14,36 @@
     height: 600px;
     width: 100%;
 }
-.header{
+.header_home, .header_objetivo{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
 }
 
-.header img{
+.header_home img, .header_objetivo img{
     width: 15rem;
-
 }
 
-.header .nav a{
+.header_home .nav a{
     text-decoration: none;
     color: white;
     font-size: 20px;
     margin-right: 2.5rem;
 }
-.header .nav .entrar{
+
+.header_objetivo .nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 2.5rem;
+}
+
+.header_objetivo{
+    background-color: #A0784D ;
+}
+
+.header_home .nav .entrar, .header_objetivo .nav .entrar{
     border: 5px solid #F4BC33 ;
     border-radius: 40px;
     padding: 10px 40px 10px 40px; /*em cima - direita - embaixo - esquerda*/
