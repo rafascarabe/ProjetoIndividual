@@ -1,10 +1,18 @@
 
     /* HEADER - INDEX.HTML */
 
+
+:root {
+    --color-primary: #ED4D18;
+    --color-secondary: #FF9A3C;
+    --color-black: #000;
+    --color-white: #fff;
+}
+
 .body{
     margin: 0;
     display: block;
-    background-color: black;
+    background-color: #000;
 }
 
 .tumb{
@@ -14,15 +22,16 @@
     height: 600px;
     width: 100%;
 }
-.header_home, .header_objetivo{
+.header_home{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    flex-direction: row;
 }
 
-.header_home img, .header_objetivo img{
-    width: 15rem;
+.header_home img, .header_objetivo img, .nav-footer img{
+    width: 12rem;
 }
 
 .header_home .nav a{
@@ -40,13 +49,27 @@
 }
 
 .header_objetivo{
-    background-color: #A0784D ;
+    background-color: var(--color-secondary) ;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0;
 }
 
 .header_home .nav .entrar, .header_objetivo .nav .entrar{
-    border: 5px solid #F4BC33 ;
-    border-radius: 40px;
+    
     padding: 10px 40px 10px 40px; /*em cima - direita - embaixo - esquerda*/
+
+    background-color: var(--color-primary);
+    border: solid 2px var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black); /*sombra*/
+    color: var(--color-black);
+    
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
 }
 
     /* TEXTO - INDEX.HTML */
@@ -79,7 +102,7 @@
     flex-direction: column;
     height: 500px;
     width: 100%;
-    background-color: #D9B98D ;
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
 }
 
 .container .title span{
@@ -113,11 +136,136 @@
     height: 240px;
     width: 200px;
     display: flex;
-    background-color: #F4BC33;
-    border: solid black 2px ;
+
     justify-content: start;
     align-self: center;
     padding-left: 10px;
     font-size: 23px;
+
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+}
+.card:nth-child(2n){
+    align-self: end;
+}
+.c3{
+    background-color: var(--color-primary);
+}
+.c6{
+    background-color: var(--color-secondary);
 }
 
+    /* CONTEÚDO - OBJETIVOS.HMTL */
+
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
+    flex-direction: row;
+    height: 505px;
+}
+
+.caixa-onu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border: solid black 2px;
+    width: 25rem;
+    height: 27rem;
+    margin: 1.5rem ; /*em cima - direita - embaixo - esquerda*/
+    padding: 10px;
+}
+.caixa-onu p{
+    font-size: 15px;
+}
+.caixa-onu strong{
+    font-size: 20px;
+    margin: 0;
+}
+
+.caixa-objetivos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border: solid black 2px;
+    width: 75rem;
+    height: 27rem;
+    margin: 1.5rem;
+    padding: 15px;
+}
+.caixa-objetivos p{
+    font-size: 18px;
+}
+.caixa-objetivos strong{
+    font-size: 35px;
+    margin: 0;
+}
+
+    /* FOOTER */
+
+.nav-footer{
+    height: 400px;
+    background-color: var(--color-black) ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-footer .pages .links a, .explorar-generos a{
+    text-decoration: none;
+    color: white;
+}
+.nav-footer .pages{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav-footer .pages .links a:hover{
+    color: var(--color-secondary);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    /*border: white solid 2px;*/
+    
+    width: 500px;
+    height: 285px;
+    margin: 0;
+
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-black);
+    box-shadow: 4px 4px 0 var(--color-black);
+    padding: 1rem;
+}
+.form button{
+    background-color: var(--color-primary);
+    border: solid 2px var(--color-black);
+    box-shadow: 2px 2px 0 var(--color-black); /*sombra*/
+    color: var(--color-black);
+    
+    font-size: 15px;
+    padding: 5px 10px;
+    text-align: center;
+}
+.form strong{
+    align-self: center;
+    font-size: 40px;
+}
+
+
+.explorar-generos{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+}
+.explorar-generos strong{
+    font-size: 25px;
+}
+.explorar-generos a:hover{
+    color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
