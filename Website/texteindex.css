@@ -87,6 +87,7 @@ body{
 .texto-box-1 a{
     text-decoration: none;
     color: var(--color-primary-azul);
+    font-size: 20px;
 }
 
 /* ------------------------------------------ BOX-2 - INDEX*/
@@ -102,9 +103,9 @@ body{
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     flex-direction: column;
-    height: 500px;
+    height: 460px;
 }
 
 .texto-box-2{
@@ -146,7 +147,7 @@ body{
     justify-content: start;
     align-items: start;
     flex-direction: column;
-    background-color: var(--color-secondary-azul);
+    background-color: var(--color-amarelo);
     
     padding: 8px;   
     border-radius: 20px;
@@ -171,7 +172,7 @@ body{
 }
 .topicos{
     background-color: var(--color-secondary-azul);
-    height: 450px;
+    height: 400px;
     width: 300px;
     border-radius: 20px;
 }
