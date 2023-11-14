@@ -3,8 +3,11 @@
 
 
 :root {
-    --color-primary: #ED4D18;
-    --color-secondary: #FF9A3C;
+    --color-primary-laranja: #E57056;
+    --color-primary-azul: #274653;
+    --color-secondary-laranja: #F2A267;
+    --color-secondary-azul: #319D8F;
+    --color-amarelo: #E7C371;
     --color-black: #000;
     --color-white: #fff;
 }
@@ -36,20 +39,20 @@
 
 .header_home .nav a{
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
     font-size: 20px;
     margin-right: 2.5rem;
 }
 
 .header_objetivo .nav a{
     text-decoration: none;
-    color: white;
+    color: var(--color-white);
     font-size: 20px;
     margin-right: 2.5rem;
 }
 
 .header_objetivo{
-    background-color: var(--color-secondary) ;
+    background-color: var(--color-primary-azul) ;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -62,11 +65,12 @@
     
     padding: 10px 40px 10px 40px; /*em cima - direita - embaixo - esquerda*/
 
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-laranja);
     border: solid 2px var(--color-black);
     box-shadow: 4px 4px 0 var(--color-black); /*sombra*/
     color: var(--color-black);
-    
+    cursor: pointer;
+    transition: 0.2s;
     font-size: 1.25rem;
     text-align: center;
     text-decoration: none;
@@ -83,13 +87,13 @@
     margin-top: 80px;
 }
 .headline{
-    color: white;
+    color: var(--color-white);
     font-size: 40px;
     font-weight: bold;
     margin-block-end: 0px;
 }
 .descricao{
-    color: white;
+    color: var(--color-white);
     font-size: 25px;
 }
 
@@ -128,31 +132,39 @@
 .container .cards{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 300px;
 }
 
 .container .card{
-    height: 240px;
-    width: 200px;
+    height: 200px;
+    width: 180px;
     display: flex;
-
+    cursor: pointer;
+    transition: 0.2s;
     justify-content: start;
-    align-self: center;
-    padding-left: 10px;
-    font-size: 23px;
-
+    align-items: start;
+    padding: 8px;   
+    flex-direction: column;
     border: 2px solid var(--color-black);
     box-shadow: 4px 4px 0 var(--color-black);
 }
-.card:nth-child(2n){
-    align-self: end;
+.container .card strong{
+    font-size: 30px; 
+}
+.container .card p{
+    font-size: 23px;
 }
 .c3{
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary-azul);
+    align-self: flex-start;
 }
-.c6{
-    background-color: var(--color-secondary);
+.card:nth-child(2n){
+    background-color: var(--color-secondary-laranja);
+    align-self: flex-end;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
 }
 
     /* CONTEÚDO - OBJETIVOS.HMTL */
@@ -170,10 +182,12 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    border: solid black 2px;
-    width: 25rem;
+    border: solid var(--color-black) 2px;
+    background-color: var(--color-secondary-laranja);
+    box-shadow: 4px 4px 0 var(--color-black);
+    width: 35rem;
     height: 27rem;
-    margin: 1.5rem ; /*em cima - direita - embaixo - esquerda*/
+    margin: 1.5rem 1rem 1.5rem 3rem; /*em cima - direita - embaixo - esquerda*/
     padding: 10px;
 }
 .caixa-onu p{
@@ -189,10 +203,10 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    border: solid black 2px;
-    width: 75rem;
+    width: 60rem;
     height: 27rem;
     margin: 1.5rem;
+    margin-right: 2rem;
     padding: 15px;
 }
 .caixa-objetivos p{
@@ -207,7 +221,7 @@
 
 .nav-footer{
     height: 400px;
-    background-color: var(--color-black) ;
+    background-color: var(--color-primary-azul) ;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -224,7 +238,7 @@
     justify-content: center;
 }
 .nav-footer .pages .links a:hover{
-    color: var(--color-secondary);
+    color: var(--color-secondary-laranja);
 }
 
 .form{
@@ -236,16 +250,18 @@
     height: 285px;
     margin: 0;
 
-    background-color: var(--color-secondary);
+    background-color: var(--color-secondary-laranja);
     border: 2px solid var(--color-black);
     box-shadow: 4px 4px 0 var(--color-black);
     padding: 1rem;
 }
 .form button{
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-laranja);
     border: solid 2px var(--color-black);
     box-shadow: 2px 2px 0 var(--color-black); /*sombra*/
     color: var(--color-black);
+    cursor: pointer;
+    transition: 0.2s;
     
     font-size: 15px;
     padding: 5px 10px;
@@ -266,6 +282,6 @@
     font-size: 25px;
 }
 .explorar-generos a:hover{
-    color: var(--color-primary);
-  background-color: var(--color-secondary);
+    color: var(--color-primary-laranja);
+  background-color: var(--color-secondary-laranja);
 }
