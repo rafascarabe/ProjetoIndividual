@@ -27,7 +27,8 @@ body{
 }
 
 .header_home img, .nav-footer .pages a img{
-    width: 10rem;
+    width: 6rem;
+    margin-left: 20px;
 }
 
 .header_home .nav a{
@@ -191,7 +192,7 @@ body{
 }
 
 .topicos{
-    background-color: var(--color-secondary-azul);
+    background-color: rgb(182, 180, 180);
     height: 600px;
     width: 300px;
     border-radius: 20px;
