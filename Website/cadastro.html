@@ -8,20 +8,34 @@
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
 </head>
-<body class="body-login">
+<body class="body-cadastro">
     <span id="menu"><a href="index.html">&#9776;</a></span>
-    <div class="form-login">
+    
+    <div class="form-cadastro">
         <strong>Cadastrar Usuário</strong>
         <p>Bem vindo(a) ao Magia Literária!</p>
+
         <div id="informacoes">
-            <input type="text" placeholder="Nome de Usuário"/><br><br>
-            <input type="password" placeholder="Senha"/>
+            Insira seu nome completo<br>
+                <input type="text" placeholder="Nome Completo"/><br>
+            Insira seu e-mail<br>
+                <input type="text" placeholder="E-mail"/><br>
+            Confirmar e-mail<br>
+                <input type="text" placeholder="Confirmar E-mail"/><br>
+            Crie uma senha<br>
+                <input type="password" placeholder="Senha"/><br>
+            Confirmar senha<br>
+                <input type="password" placeholder="Confirmar Senha"/>
         </div>
+
         <label class="receber_noticias">
             <input type="checkbox" name="receber_noticias" id="receber_noticias">Eu aceito receber as novidades<br>do mundo literário pelo meu e-mail.
         </label>
+
         <button onclick="login()">CADASTRAR</button>
+
         <span>Já tem uma conta? <a href="login.html" style="color: #319D8F;">Fazer login</a></span>
     </div>
+
 </body>
 </html>
