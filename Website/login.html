@@ -6,22 +6,22 @@
     <title>LOGIN</title>
 
     <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/png" href="img/livro-icone-logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
 </head>
 <body class="body-login">
-    
+    <span id="menu"><a href="index.html">&#9776;</a></span>
     <div class="form-login">
         <strong>Logar Usuário</strong>
         <p>Bem vindo(a) de volta!</p>
         <div id="informacoes">
-            <input type="text" placeholder="Nome de Usuário"/><br><br>
-            <input type="password" placeholder="Senha"/>
+            <input type="text" placeholder="👤 Nome de Usuário"/><br><br>
+            <input type="password" placeholder="🔒 Senha"/>
         </div>
-        <div>
+        <label class="lembrar_usuario">
             <input type="checkbox" name="lembrar" id="lembrar_usuario">Lembrar usuário
-        </div>
+        </label>
         <button onclick="login()">LOGIN</button>
-        <span>Não tem conta? <a href="cadastro.html">Cadastre-se</a></span>
+        <span>Não tem conta? <a href="cadastro.html" style="color: #319D8F;">Cadastre-se</a></span>
     </div>
 </body>
 </html>

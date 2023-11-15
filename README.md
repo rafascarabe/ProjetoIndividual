@@ -1,5 +1,5 @@
 # ProjetoIndividual
-<img src="Website/protótipo-home.png" style="width: 650px;">
+<img src="Website/img/print-home.png" style="width: 650px;">
 <br>
 
 <h3>Product Backlog</h3>
