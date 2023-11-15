@@ -193,7 +193,7 @@
 
 .topicos{
     background-color: rgb(182, 180, 180);
-    height: 600px;
+    height: 540px;
     width: 300px;
     border-radius: 20px;
 }
@@ -374,5 +374,50 @@ footer{
     transition: 0.2s;
 }
 
-/* ------------------------------------------ BODY - CADASTRO */
+/* ------------------------------------------ CONTEÚDO - OBJETIVOS */
 
+   .conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 505px;
+}
+
+.caixa-onu{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: var(--color-secondary-azul);
+    border-radius: 20px;
+    width: 35rem;
+    height: 27rem;
+    margin: 1.5rem 1rem 1.5rem 3rem; /*em cima - direita - embaixo - esquerda*/
+    padding: 10px;
+}
+.caixa-onu p{
+    font-size: 15px;
+}
+.caixa-onu strong{
+    font-size: 20px;
+    margin: 0;
+}
+
+.caixa-objetivos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 60rem;
+    height: 27rem;
+    margin: 1.5rem;
+    margin-right: 2rem;
+    padding: 15px;
+}
+.caixa-objetivos p{
+    font-size: 18px;
+}
+.caixa-objetivos strong{
+    font-size: 35px;
+    margin: 0;
+}
