@@ -17,25 +17,57 @@
 
         <div id="informacoes">
             Insira seu nome completo<br>
-                <input type="text" placeholder="Nome Completo"/><br>
+                <input type="text" id="nome_input" placeholder="Nome Completo"/><br>
+            Crie um nome de usuário<br>
+                <input type="text" id="nome_usuario_input" placeholder="👤 Nome de Usuário"/><br>
             Insira seu e-mail<br>
-                <input type="text" placeholder="E-mail"/><br>
+                <input type="text" id="email_input" placeholder="E-mail"/><br>
             Confirmar e-mail<br>
-                <input type="text" placeholder="Confirmar E-mail"/><br>
+                <input type="text" id="email_confirmar_input" placeholder="Confirmar E-mail"/><br>
             Crie uma senha<br>
-                <input type="password" placeholder="Senha"/><br>
+                <input type="password" id="senha_input" placeholder="Senha"/><br>
             Confirmar senha<br>
-                <input type="password" placeholder="Confirmar Senha"/>
+                <input type="password" id="senha_confirmar_input" placeholder="Confirmar Senha"/>
         </div>
 
+        <span id="mensagem_erro"></span>
+        
         <label class="receber_noticias">
             <input type="checkbox" name="receber_noticias" id="receber_noticias">Eu aceito receber as novidades<br>do mundo literário pelo meu e-mail.
         </label>
 
-        <button onclick="login()">CADASTRAR</button>
+        <button onclick="cadastrar()">CADASTRAR</button>
 
         <span>Já tem uma conta? <a href="login.html" style="color: #319D8F;">Fazer login</a></span>
     </div>
 
 </body>
 </html>
+
+<script>
+    function cadastrar(){
+        var nome = nome_input.value;
+        var nomeUsuario = nome_usuario_input.value;
+        var email = email_input.value;
+        var confirmarEmail = email_confirmar_input.value;
+        var senha = senha_input.value;
+        var confirmarSenha = senha_confirmar_input.value;
+
+        if(nomeUsuario == '' || nomeUsuario.trim() == '' || senha == '' || senha.trim() == '' || email == '' || email.trim() == '' || confirmarEmail == '' || confirmarEmail.trim() == '' || nome == '' || nome.trim() == '' || confirmarSenha == '' || confirmarSenha.trim() == '' ){
+
+            mensagem_erro.innerHTML = `&#10008; Preencha todas as informações`;
+        
+        } else if(senha.length <= 6){
+            mensagem_erro.innerHTML = `&#10008; A senha deve ter 6 ou mais dígitos`;
+        } else if(senha != confirmarSenha){
+            mensagem_erro.innerHTML = `&#10008; A senha de confirmação difere da senha inserida`;
+        } else if(email != confirmarEmail){
+            mensagem_erro.innerHTML = `&#10008; O e-mail de confirmação difere do e-mail inserido`;
+        }else {
+            // Aguardar 2 segundos antes de redirecionar para a página de perfil
+          setTimeout(function () {
+            window.location.href = 'perfil.html'; 
+          }, 2000); // 5000 milissegundos = 5 segundos
+        }
+    }
+</script>
