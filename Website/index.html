@@ -92,7 +92,16 @@
         </div>
 
             <div class="topicos">
+                <strong>Indicação Rapida</strong>
+                <div id="capa_livro">
 
+                </div>
+                <div>
+                    <div id="sinopse_livro">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque eligendi qui consectetur aliquid iure ipsum velit, et rem quis dolorem vero quibusdam placeat ea maxime quod doloremque adipisci et rem 
+                    </div>
+                    <button id="read_button">Ler mais</button>
+                </div>
             </div>
 
     </div>
@@ -103,7 +112,7 @@
 
                 <p>Através da leitura, as pessoas adquirem conhecimento, habilidades e compreensão do mundo ao seu redor, capacitando-as a atingir seu pleno potencial.</p>
 
-                <p>A leitura não conhece fronteiras. Ao mesmo tempo em que capacita os leitores, a leitura também se revela como uma força motriz essencial para a promoção da alfabetização. O acesso a materiais de leitura cria um ciclo virtuoso, fortalecendo a base educacional necessária para o progresso sustentável.</p> 
+                <p><i>&#10077;A leitura não conhece fronteiras&#10078;</i>. Ao mesmo tempo em que capacita os leitores, a leitura também se revela como uma força motriz essencial para a promoção da alfabetização. O acesso a materiais de leitura cria um ciclo virtuoso, fortalecendo a base educacional necessária para o progresso sustentável.</p> 
 
                 <p>Ao inspirar indivíduos a se tornarem leitores ávidos, estamos investindo no empoderamento de pessoas e comunidades, contribuindo para um mundo mais igualitário e próspero.</p>
 
@@ -181,6 +190,26 @@
 </html>
 
 <script>
+
+    var listaLivrosIMG = ['<img src="img/livros/A Hipótese do Amor.jfif" style="width: 60%;">', 
+                          '<img src="img/livros/Daisy Jones & The Six.jfif" style="width: 60%;">',
+                          '<img src="img/livros/É assim que começa - Colleen Hoover.jfif" style="width: 60%;">',
+                          '<img src="img/livros/A arte da guerra.jfif" style="width: 60%;">',
+                          '<img src="img/livros/Clube do Livro dos Homens – Lyssa Kay Adams.jfif" style="width: 60%;">',
+                          '<img src="img/livros/A Biblioteca da meia noite.jfif" style="width: 60%;">',
+                          '<img src="img/livros/A Rainha do Nada 🗡.jfif" style="width: 60%;">',
+                          '<img src="img/livros/Os sete maridos de Evelyn Hugo.jfif" style="width: 60%;">',
+                          '<img src="img/livros/Pessoas Normais, de Sally Rooney.jfif" style="width: 60%;">',
+                          '<img src="img/livros/Verity - Colleen Hoover.jfif" style="width: 60%;">',
+                          '<img src="img/livros/O morro dos ventos uivantes.jfif" style="width: 60%;">'];
+
+    //for(var posiçao = 0; posiçao <= listaLivros.length; posiçao += 1){
+        var indicaçao = parseInt(Math.random() * listaLivrosIMG.length)
+        capa_livro.innerHTML = listaLivrosIMG[indicaçao];
+        
+        
+    //}
+
     function AssinarNewsletter(){
         var nome = nome_input.value;
         var email = email_input.value;
@@ -188,9 +217,8 @@
         if(nome.length == 0 || nome.trim() == 0 || email.length == 0 || email.trim() == 0){
             mensagem_erro.innerHTML = `&#10008; Preencha todas as informações`;
         } else{
-            Alert(`Parabéns!! Agora você faz parte dos mais de mil assinantes da melhor Newsletter 
-            literária do país. OBS: Não esqueça de nos favoritar na sua caixa de entrada`)
-        }
+            alert(`Parabéns!! Agora você faz parte dos + mil assinantes da melhor Newsletter literária do país. OBS: Não esqueça de nos favoritar na sua caixa de entrada`)
+        } 
     }
 </script>
     

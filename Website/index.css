@@ -196,14 +196,76 @@
 }
 
 .topicos{
-    /*background-color: rgb(182, 180, 180);*/
     height: 540px;
     width: 300px; max-width: 500px;
     border-radius: 20px;
     background-image: url(img/estante-livros.jfif);
     object-fit: cover;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color-white);
+    padding: 10px;
 }
 
+.topicos #capa_livro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.topicos #sinopse_livro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 15px;
+    text-align: justify;
+}
+.topicos strong{
+    font-size: 28px;
+}
+
+#read_button{
+    border-radius: 2px;
+    border: transparent;
+    background-color: var(--color-primary-laranja);
+    color: var(--color-black);
+    padding: 7px 123px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#read_button:hover {
+    background-color: var(--color-primary-azul);
+    color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+}
+
+.topicos.active {
+    height: auto;
+}
+
+.topicos #sinopse_livro{
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.topicos #sinopse_livro::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, var(--color-black));
+}
+
+.topicos.active::before{
+    visibility: hidden;
+}
 /* ------------------------------------------ FOOTER - INDEX */
 footer{
     width: 100%;
@@ -266,7 +328,6 @@ footer span{
 .form{
     display: flex;
     flex-direction: column;
-    /*border: white solid 2px;*/
     
     width: 480px;
     height: 285px;
@@ -279,15 +340,22 @@ footer span{
 }
 .form button{
     background-color: var(--color-primary-laranja);
-    border-radius: 20px;
+    border-radius: 2px;
+    border: transparent;
     color: var(--color-black);
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease-in-out;
     
     font-size: 15px;
     padding: 5px 10px;
     text-align: center;
 }
+.form button:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: var(--color-primary-azul);
+    color: var(--color-white);
+}
+
 .form strong{
     align-self: center;
     font-size: 40px;
@@ -386,7 +454,7 @@ footer span{
     background-color: var(--color-primary-laranja);
     color: var(--color-black);
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease-in-out;
     
     font-size: 15px;
     padding: 5px 40px;
@@ -395,7 +463,7 @@ footer span{
 }
 #lembrar_usuario, .lembrar_usuario{
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease-in-out;
 }
 
 .receber_noticias, #receber_noticias {
@@ -407,6 +475,7 @@ footer span{
     font-size: 13px;
     color: var(--color-primary-laranja);
     margin: 0;
+    justify-self: center;
 }
 
 .dropdown{
@@ -421,7 +490,7 @@ footer span{
 .dropdown-menu a{
     color: var(--color-black);
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease-in-out;
     text-decoration: none;
     font-size: 15px;
     padding: 15px;
@@ -456,6 +525,8 @@ footer span{
     height: auto;
     /*margin: 1.5rem 1rem 1.5rem 3rem; em cima - direita - embaixo - esquerda*/
     padding: 10px;
+
+    text-align: justify;
 }
 .caixa-onu p{
     font-size: 16px;
