@@ -8,52 +8,16 @@
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
 </head>
-<style>
-    .span_menu{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-    }
-    #pop-up{
-        width: 200px;
-        height: 100px;
-        display: block;
-        background-color: #319D8F;
-        align-self: start;
-        justify-self: start;
-        margin-top: 1rem; 
-    }
-    #pop-up a{
-        text-decoration: none;
-        justify-self: center;
-        align-self: center;
-        color: black;
-        font-size: 15px;
-    }
-</style>
-<script>
-        function exibir(){
-            pop-up.style.display == 'block';
-        }
 
-        function fechar(){
-            pop-up.style.display == 'none';
-        }
-
-</script>
 <body class="body-login">
-    <!-- <span class="span_menu"> -->
-        <span id="menu"><a href="index.html" onmouseover="exibir()">&#9776;</a></span>
-
-       <!-- <span id="pop-up">
-            <a href="index.html">Página Inicial</a>
-            <hr>
-            <a href="objetivos.html">Nossos Objetivos</a>
-            <hr>
-            <a href="#">Assinar Newsletter</a>
+    <span id="menu" class="dropdown"> &#9776;
+        
+        <span class="dropdown-menu">
+                <a href="index.html">Página Inicial</a>
+                <a href="index.html #objetivos">Nossos Objetivos</a>
+                <a href="index.html #form">Assinar Newsletter</a>
         </span>
-    </span> -->
+    </span>
 
     <div class="form-login">
         <strong>Logar Usuário</strong>
