@@ -8,6 +8,10 @@
     --color-white: #fff;
 }
 
+ body, footer{
+    font-family: 'Rubik', sans-serif;
+ }
+
 .body-index{
     display: flex;
     align-items: center;
@@ -61,7 +65,7 @@
     background-color: var(--color-secondary-laranja);
     border-radius: 20px;
     width: 92%;
-    height: 450px;
+    height: 310px;
     margin: 0;
 }
 .texto-box-1{
@@ -72,23 +76,23 @@
     margin: 0;
 }
 .box-1 img{
-    width: 500px;
+    height: 290px;
     align-self: center;
     justify-self: end;
     
 }
 .box-1 .texto-box-1 strong{
-    font-size: 35px;
+    font-size: 28px;
     color: var(--color-black);
 }
 .box-1 .texto-box-1 p{
-    font-size: 20px;
+    font-size: 18px;
     color: var(--color-black);
 }
 .texto-box-1 a{
     text-decoration: none;
     color: var(--color-primary-azul);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 /* ------------------------------------------ BOX-2 - INDEX*/
@@ -109,24 +113,24 @@
     height: 600px;
 }
 
-.texto-box-2{
+.box-4{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    width: 100%;
+    width: 99.9%;
     border: 2px solid var(--color-primary-azul);
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 0 0; /*em cima - direita - embaixo - esquerda*/
 }
 
-.texto-box-2 .title span{
+.box-4 .title span{
     font-size: 35px; 
     font-weight: bold;
     align-self: start;
 }
 
-.texto-box-2 .title{
+.box-4 .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,24 +196,46 @@
 }
 
 .topicos{
-    background-color: rgb(182, 180, 180);
+    /*background-color: rgb(182, 180, 180);*/
     height: 540px;
-    width: 300px;
+    width: 300px; max-width: 500px;
     border-radius: 20px;
+    background-image: url(img/estante-livros.jfif);
+    object-fit: cover;
 }
 
 /* ------------------------------------------ FOOTER - INDEX */
 footer{
     width: 100%;
+    height: auto;
+    background-color: var(--color-primary-azul);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 410px;
+    width: 100%;
+   
+}
+footer span{
+    color: var(--color-white);
+    justify-self: center;
+    margin-bottom: 15px;
 }
 .nav-footer{
-    height: 400px;
-    width: 100%;
-    background-color: var(--color-primary-azul) ;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
+    height: 400px;
+    width: 100%;
 }
 .nav-footer .pages .links a{
     text-decoration: none;
@@ -247,6 +273,7 @@ footer{
     margin: 0;
 
     background-color: var(--color-white);
+    color: var(--color-black);
     border-radius: 20px;
     padding: 15px;
 }
@@ -264,6 +291,7 @@ footer{
 .form strong{
     align-self: center;
     font-size: 40px;
+    color: var(--color-black);
 }
 
 .explorar-generos{
@@ -382,36 +410,50 @@ footer{
 
 /* ------------------------------------------ CONTEÚDO - OBJETIVOS */
 
-   .conteudo{
+.box-3{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    height: auto;
+    flex-direction: row;
+    
+    width: 92%;
+    margin: 0;
 }
 
 .caixa-onu{
     display: flex;
     flex-direction: column;
     align-items: start;
-    background-color: var(--color-secondary-azul);
+    background-color: var(--color-primary-azul);
     border-radius: 20px;
-    width: 35rem;
-    height: 20rem;
-    margin: 1.5rem 1rem 1.5rem 3rem; /*em cima - direita - embaixo - esquerda*/
+    width: 420px; max-width: 500px;
+    height: auto;
+    /*margin: 1.5rem 1rem 1.5rem 3rem; em cima - direita - embaixo - esquerda*/
     padding: 10px;
 }
 .caixa-onu p{
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: var(--color-white);
 }
 .caixa-onu strong{
-    font-size: 20px;
+    font-size: 26px;
     margin: 0;
+    color: var(--color-white);
 }
 
-.conteudo img{
+/*.box-3 img{
     border-radius: 20px;
-    width: 35rem;
+    width: 90%;
+    align-self: center;
+}*/
+.box-3 .ODS img{
+    width: 150px; max-width: 190px;
+    object-fit: cover;
+}
+.ODS {
+    display: flex;
+    flex-direction: row;
 }
 
 .caixa-objetivos{
@@ -419,9 +461,9 @@ footer{
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    width: 60rem;
+    width: 780px; max-width: 1000px;
     height: 27rem;
-    margin: 1.5rem;
+    
     margin-right: 2rem;
     padding: 15px;
 }
