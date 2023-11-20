@@ -1,7 +1,7 @@
 # ProjetoIndividual
-<img src="Website/img/prototipo - home page.png" style="width: 650px;">
-<br>
-
+<img src="Website/img/prototipo - home page.png" style="width: 800px;">
+<span><i>Todos os direitos reservados &copy;</i></span>
+<hr>
 <h3>Product Backlog</h3>
 &rarr; Documentação do projeto <br>
 &rarr; Modelagem de Dados + Script MSQ <br>
