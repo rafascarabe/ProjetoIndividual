@@ -50,10 +50,16 @@
     border-radius: 20px;
     color: var(--color-white);
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s ease-in-out;
     font-size: 1.25rem;
     text-align: center;
     text-decoration: none;
+}
+
+.header_home .nav .entrar:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: var(--color-primary-laranja);
+    color: var(--color-black);
 }
 /* ------------------------------------------ BOX-1 - INDEX*/
 .box-1{
@@ -158,7 +164,7 @@
     
     border-radius: 20px;
     padding: 8px;
-    box-shadow: #363636 0 8px 8px 0;
+    box-shadow: #363636 2px 8px 8px 2px;
     background-color: var(--color-white);
 
     margin-left: 0.7rem;
@@ -238,7 +244,7 @@
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(transparent, var(--color-black));
+    background: linear-gradient(transparent, #1a0c0c);
 }
 
 .topicos strong{
@@ -649,7 +655,7 @@ footer span{
     text-decoration: none;
     color: var(--color-black);
 }
-/* ------------------------------------------ CONTEÚDO - PERFIL - EXPLORAR */
+/* ------------------------------------------ CONTEÚDO - EXPLORAR */
 
 .conteudo_perfil_explorar{
     width: 90%;
@@ -668,4 +674,118 @@ footer span{
 
     margin-left: 2.75rem;
     margin-right: 2.75rem;
+}
+
+
+/* ----------------------------------------------------------------- CONTEÚDO - EXPLORAR -> SPOTIFY */
+.body_explorar {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.spotify{
+    background-color: #121212;
+}
+.conteudo_perfil_spotify{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    justify-self: end;
+
+    margin-top: 2rem;
+}
+
+.generos_musicais{
+    display: flex;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+}
+.generos_musicais .coluna{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: auto;
+    width: auto;
+
+    margin-bottom: 1rem;
+
+}
+
+.generos_musicais .coluna span{
+    width: 230px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    border-radius: 10px;
+    box-shadow: var(--color-black) 2px 6px 6px 2px;
+    
+    margin-left: 0.7rem;
+    margin-right: 0.7rem; 
+}
+
+.generos_musicais .coluna span img{
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    margin-right: 8px;
+}
+.generos_musicais .coluna span strong{
+    font-size: 15px;
+    color: var(--color-white);
+}
+
+.playlist {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: auto;
+}
+
+.playlist .card{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 320px;
+
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--color-black) 2px 8px 8px 2px;
+    background-color: #121212;
+    color: var(--color-white);
+
+    margin: 1rem 3rem 0 3rem; /*em cima - direita - embaixo - esquerda*/
+}
+.playlist .card p{
+    font-size: 15px;
+}
+.playlist .card img{
+    width: 80%;
+    height: 150px;
+    object-fit: cover;
+    align-self: center;
+}
+.playlist .card a{
+    text-decoration: none;
+}
+
+.conteudo_perfil_spotify .titulo strong{
+    font-size: 25px;
+    color: var(--color-white);
+}
+.conteudo_perfil_spotify .titulo i{
+    font-size: 10px;
+    color: var(--color-white);
 }
