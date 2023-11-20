@@ -427,9 +427,8 @@ footer span{
 }
 
 .form-cadastro{
-    /*background-color: #f2a16762;*/
     width: 400px;
-    height: 485px;
+    height: 500px;
     margin-left: 7rem;
     margin-top: 3rem;
     padding: 15px;
@@ -467,6 +466,13 @@ footer span{
     text-align: center;
     width: 300px;
 }
+
+.form-cadastro button:hover, .form-login button:hover{
+    transition: all 0.2s ease-in-out;
+    background-color: var(--color-primary-azul);
+    color: var(--color-white);
+}
+
 #lembrar_usuario, .lembrar_usuario{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -578,7 +584,7 @@ footer span{
     margin: 0;
 }
 
-    /*  #bdbdbd ----------------------------------------------- NAVEGAÇÃO LATERAL - PERFIL / EXPLORAR / FAVORITOS / MÉTRICAS / NOTÍCIAS */
+    /* ----------------------------------------------- NAVEGAÇÃO LATERAL - PERFIL / EXPLORAR / FAVORITOS / MÉTRICAS / NOTÍCIAS */
 
 .body_perfil{
     margin: 0;
@@ -630,6 +636,7 @@ footer span{
 
 .navegacao_lateral_dropdown label:hover{
     background-color: var(--color-secondary-laranja);
+    transition: all 0.2s ease-in-out;
 }
 
 .navegacao_lateral:hover .navegacao_lateral_dropdown a{ /*quando passar o mouse no 'dropdown' uma ação será realizada no 'dropdown-menu'*/
