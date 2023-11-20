@@ -683,7 +683,7 @@ footer span{
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: 550px;
 }
 
 .spotify{
@@ -691,14 +691,14 @@ footer span{
 }
 .conteudo_perfil_spotify{
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
-    flex-direction: column;
+    justify-content: flex-end;
+    flex-direction: row;
     justify-self: end;
 
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .generos_musicais{
@@ -707,9 +707,8 @@ footer span{
     width: 100%;
     flex-direction: column;
 }
-.generos_musicais .coluna{
+.generos_musicais{
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 
@@ -720,7 +719,7 @@ footer span{
 
 }
 
-.generos_musicais .coluna span{
+.generos_musicais span{
     width: 230px;
     height: 50px;
 
@@ -731,16 +730,18 @@ footer span{
     border-radius: 10px;
     box-shadow: var(--color-black) 2px 6px 6px 2px;
     
-    margin-left: 0.7rem;
-    margin-right: 0.7rem; 
+    margin: 0.5rem 0 0.5rem 0; /*em cima - direita - embaixo - esquerda*/
+    
 }
 
-.generos_musicais .coluna span img{
+.generos_musicais span p{
     height: 100%;
+    width: 60px;
+    content: '';
     border-radius: 10px 0 0 10px;
-    margin-right: 8px;
+    margin-right: 10px;
 }
-.generos_musicais .coluna span strong{
+.generos_musicais span strong{
     font-size: 15px;
     color: var(--color-white);
 }
@@ -751,12 +752,14 @@ footer span{
     justify-content: center;
     flex-direction: row;
     height: auto;
+    margin-top: 2rem;
 }
 
 .playlist .card{
     display:flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-between;
     width: 200px;
     height: 320px;
 
@@ -766,10 +769,14 @@ footer span{
     background-color: #121212;
     color: var(--color-white);
 
-    margin: 1rem 3rem 0 3rem; /*em cima - direita - embaixo - esquerda*/
+    margin: 1rem 2rem 0 2rem; /*em cima - direita - embaixo - esquerda*/
 }
-.playlist .card p{
-    font-size: 15px;
+.playlist .card p, .playlist .card b{
+    font-size: 13px;
+}
+.playlist .card strong{
+    justify-self: center;
+    align-self: center;
 }
 .playlist .card img{
     width: 80%;
@@ -781,11 +788,19 @@ footer span{
     text-decoration: none;
 }
 
+.conteudo_perfil_spotify .playlist_area, .playlist_area .titulo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
 .conteudo_perfil_spotify .titulo strong{
-    font-size: 25px;
+    font-size: 35px;
     color: var(--color-white);
 }
 .conteudo_perfil_spotify .titulo i{
-    font-size: 10px;
+    font-size: 18px;
     color: var(--color-white);
+    align-self: center;
+    justify-self: center;
 }
