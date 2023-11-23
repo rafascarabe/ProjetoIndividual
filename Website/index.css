@@ -783,9 +783,14 @@ footer span{
     height: 150px;
     object-fit: cover;
     align-self: center;
+    margin-bottom: 15px;
 }
-.playlist .card a{
+.playlist .card a img{
     text-decoration: none;
+    width: 60px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 .conteudo_perfil_spotify .playlist_area, .playlist_area .titulo{
@@ -795,12 +800,12 @@ footer span{
     flex-direction: column;
 }
 .conteudo_perfil_spotify .titulo strong{
-    font-size: 35px;
-    color: var(--color-white);
+    font-size: 45px;
+    color: #51B056;
 }
 .conteudo_perfil_spotify .titulo i{
     font-size: 18px;
-    color: var(--color-white);
+    color: #51B056;
     align-self: center;
     justify-self: center;
 }

@@ -1,0 +1,21 @@
+create database universoLITERARIO;
+use universoLITERARIO;
+
+CREATE TABLE usuario (
+idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+email VARCHAR(45) NOT NULL UNIQUE,
+telefone CHAR(9),
+nickName VARCHAR(30) NOT NULL UNIQUE,
+senha VARCHAR(30) NOT NULL
+) AUTO_INCREMENT = 100;
+
+CREATE TABLE newsletter(
+idAssinante INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+email VARCHAR(45) NOT NULL UNIQUE,
+fkUSUARIO INT,
+	CONSTRAINT newsletter FOREIGN KEY (fkUSUARIO) REFERENCES usuario(idUsuario)
+);
+
+
