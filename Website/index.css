@@ -816,7 +816,11 @@ footer span{
     background-color: var(--color-secondary-laranja);
 }
 
-.conteudo_perfil_recomendacao{
+.recomendaçao .conteudo {
+    display: flex;
+    flex-direction: column;
+}
+.conteudo_perfil_recomendacao, .conteudo_perfil_generos{
     width: 100%;
     height: 100%;
 
@@ -830,7 +834,7 @@ footer span{
     
 }
 
-.conteiner_recomendados{
+.conteiner_recomendados, .conteiner_generos{
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -843,13 +847,13 @@ footer span{
     padding: 20px;
 }
 
-.conteiner_recomendados .stand{
+.conteiner_recomendados .stand, .conteiner_generos .stand{
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.conteiner_recomendados .livro{
+.conteiner_recomendados .livro, .conteiner_generos .livro {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -867,7 +871,7 @@ footer span{
     margin-right: 0.5rem;
 }
 
-.conteiner_recomendados .livro img{
+.conteiner_recomendados .livro img, .conteiner_generos .livro img{
     width: 90%;
     height: 192px;
     object-fit: cover;
@@ -875,7 +879,7 @@ footer span{
     margin-bottom: 5px;
 }
 
-.conteiner_recomendados .livro strong{
+.conteiner_recomendados .livro strong, .conteiner_generos .livro strong{
     font-size: 13px;
     color: var(--color-black);
 }
