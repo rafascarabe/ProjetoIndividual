@@ -65,7 +65,7 @@ a{
     color: var(--color-black);
 }
 /* ------------------------------------------ BOX-1 - INDEX*/
-.box-1{
+.body-index .box-1{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -84,17 +84,17 @@ a{
     flex-direction: column;
     margin: 0;
 }
-.box-1 img{
+.body-index .box-1 img{
     height: 290px;
     align-self: center;
     justify-self: end;
     
 }
-.box-1 .texto-box-1 strong{
+.body-index .box-1 .texto-box-1 strong{
     font-size: 28px;
     color: var(--color-black);
 }
-.box-1 .texto-box-1 p{
+.body-index .box-1 .texto-box-1 p{
     font-size: 18px;
     color: var(--color-black);
 }
@@ -105,7 +105,7 @@ a{
 }
 
 /* ------------------------------------------ BOX-2 - INDEX*/
-.box-2{
+.body-index .box-2{
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -114,7 +114,7 @@ a{
     margin-top: 1.5rem;
 }
 
-.container{
+.body-index .container{
     display: flex;
     align-items: center;
     justify-content: start;
@@ -122,24 +122,24 @@ a{
     height: 600px;
 }
 
-.box-4{
+.body-index .box-4{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
     width: 99.9%;
-    border: 2px solid var(--color-primary-azul);
-    margin: 1.5rem 0 0 0; /*em cima - direita - embaixo - esquerda*/
+    border-top: 2px solid var(--color-primary-azul);
+    margin: 3rem 0 0 0; /*em cima - direita - embaixo - esquerda*/
 }
 
-.box-4 .title span{
+.body-index .box-4 .title span{
     font-size: 35px; 
     font-weight: bold;
     align-self: start;
 }
 
-.box-4 .title{
+.body-index .box-4 .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,7 +147,7 @@ a{
 
 }
 
-.container .cards{
+.body-index .container .cards{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -156,13 +156,12 @@ a{
     width: 950px;
 }
 
-.container .cards .card{
+.body-index .container .cards .card{
     height: 240px;
-    width: 250px;
+    width: 400px;
 
     display: flex;
     justify-content: start;
-    align-items: center;
     flex-direction: column;
     
     border-radius: 20px;
@@ -173,34 +172,28 @@ a{
     margin-left: 0.7rem;
     margin-right: 0.7rem;
 }
-/*
-.container .cards .card:has(img:hover) img:not(:hover){
-    scale:.9;
-    opacity: .7;
-}*/
 
-.container .cards .card strong{
+.body-index .container .cards .card strong{
     font-size: 20px; 
     margin-bottom: .5px;
     
 }
-.container .cards .card p{
+.body-index .container .cards .card p{
     font-size: 15px;
     margin-top: 0;
 }
 
-.c3 img, .c6 img{
+.body-index .c3 img, .body-index .c6 img{
     height: 160px;
-    width: 250px;
+    width: 400px;
     border-radius: 20px;
     object-fit: cover;
     margin: 0, 0, 8px, 0; /*em cima - direita - embaixo - esquerda*/
 }
-.c3 .texto-card{
-    width: 250px;
+.body-index .c3 .texto-card{
+    width: 400px;
     display: flex;
     justify-content: start;
-    align-items: start;
     flex-direction: column;
     margin: 0;
 }
@@ -669,6 +662,7 @@ footer span{
 
     padding-top: 4rem;
     margin-right: 8rem;
+    margin-top: 2rem;
 }
 
 .conteudo_perfil_explorar .container .cards .card{
@@ -718,7 +712,7 @@ footer span{
     
 }
 .conteudo_perfil_explorar .container .cards .card p{
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 0;
 }
 
@@ -950,7 +944,7 @@ footer span{
     width: 100%;
 }
 
-.conteiner_recomendados .livro, .conteiner_categorias .livro {
+.conteiner_recomendados .livro a, .conteiner_categorias .livro a{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -969,7 +963,7 @@ footer span{
     padding: 5px;
 }
 
-.conteiner_recomendados .livro img, .conteiner_categorias .livro img{
+.conteiner_recomendados .livro a img, .conteiner_categorias .livro a img{
     width: 80%;
     height: 150px;
     object-fit: cover;
@@ -986,5 +980,71 @@ footer span{
     color: var(--color-black);
 }
 
+/* ----------------------------------------------------------------- CONTEÚDO - EXPLORAR -> RESENHA_LIVRO */
+.resenha_livro{
+    background-color: #eceaea;
+    justify-content: space-between;
+}
 
+.conteudo_perfil_resenha_livro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 1000px;
+    height: 100%;
+    margin-top: 1rem;
+    margin-right: 7.5rem;
+}
 
+/*--------------- BOX-1 -------------------*/
+.conteudo_perfil_resenha_livro .box-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 40%;
+    height: 100%;
+    
+    padding: 20px;
+}
+
+.conteudo_perfil_resenha_livro .box-1 img{
+    width: 66%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: #363636 2px 8px 8px 2px;
+}
+
+.conteudo_perfil_resenha_livro .box-1 .avaliacao {
+    font-size: 25px;
+}
+
+.conteudo_perfil_resenha_livro .box-1 .frase {
+    font-size: 15px;
+    text-align: center;
+}
+
+/*--------------- BOX-2 -------------------*/
+.conteudo_perfil_resenha_livro .box-2{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+.conteudo_perfil_resenha_livro .box-2 strong{
+    font-size: 50px;
+    color: var(--color-black);
+}
+
+.conteudo_perfil_resenha_livro .box-2 span{
+    font-size: 15px;
+    color: var(--color-black);
+    text-align: justify;
+}

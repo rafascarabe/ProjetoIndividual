@@ -88,8 +88,13 @@ INSERT INTO livro VALUES
 	A obra também vai trazer a visão do outro lado da moeda, onde podemos notar o caráter transformador do afeto quando essa mesma criança negligenciada é abraçada por um adulto capaz de trazer acolhimento. Isso fortemente representado na relação de Zezé e Portuga. ', 4.7);
 
 INSERT INTO livro VALUES
-(null, 'A culpa é das estrelas', 'John Green','romance','', 4.9),
-(null, 'A culpa é das estrelas', 'John Green','romance','', 4.9),
+(null, 'O Pequeno Príncipe', 'Antoine de Saint-Exupéry','ficção',
+	'O Pequeno Príncipe é uma bela história de reflexão e aprendizado.
+	A história do Pequeno Príncipe é contada por ele ao aviador (e ao leitor) enquanto tenta consertar o motor de seu avião para voltar para casa. 
+	A trama começa em seu planeta, onde o Pequeno Príncipe cuidava de seus três vulcões e de sua rosa, até que um dia percebeu que poderia aumentar seu amor por ele. Então ele decidiu visitar os planetas próximos, onde conheceu os primeiros adultos mais velhos da história e um deles – o geógrafo – recomendou que ele visitasse a Terra. Lá ele encontra o aviador, a raposa e outras criaturas, incluindo a cobra amarela que tem o poder de devolver as pessoas de onde elas vieram. 
+	Uma das coisas mais impressionantes sobre o livro é sua capacidade de falar tanto com crianças quanto com adultos. Por exemplo, as crianças podem se identificar com a aventura do pequeno príncipe e sua busca por respostas, enquanto os adultos podem se conectar com as lições profundas sobre o significado da vida.', 4.7),
+(null, 'Os sete maridos de Evelyn Hugo', 'Taylor Jenkins Reid','romance',
+	'', 4.9),
 (null, 'A culpa é das estrelas', 'John Green','romance','', 4.9),
 (null, 'A culpa é das estrelas', 'John Green','romance','', 4.9),
 (null, 'A culpa é das estrelas', 'John Green','romance','', 4.9);
