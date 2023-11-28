@@ -994,7 +994,7 @@ footer span{
     width: 1000px;
     height: 100%;
     margin-top: 1rem;
-    margin-right: 7.5rem;
+    margin-right: 6rem;
 }
 
 /*--------------- BOX-1 -------------------*/
@@ -1031,15 +1031,15 @@ footer span{
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: space-evenly;
+    justify-content: space-around;
 
-    width: 50%;
+    width: 60%;
     height: 100%;
-    padding: 20px;
+    margin-left: 10px;
 }
 
 .conteudo_perfil_resenha_livro .box-2 strong{
-    font-size: 50px;
+    font-size: 30px;
     color: var(--color-black);
 }
 
