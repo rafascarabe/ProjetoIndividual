@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resenha</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="body_explorar resenha_livro">
+    
+    <div class="navegacao_lateral">
+
+        <div class="navegacao_lateral_dropdown">        
+            <label>
+                <img src="img/perfil-icons/perfil-icon-removebg-preview.png">
+                <a href="perfil.html"><b>Perfil</b></a>
+            </label> 
+
+            <label style="border-top: 2px black solid; padding-top: 10px;">
+                <img src="img/perfil-icons/explorar-icon-removebg-preview.png">
+                <a href="explorar.html"><b>Explorar</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/favorito-icon-removebg-preview.png">
+                <a href="favoritos.html"><b>Favoritos</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/dashboard-icon-removebg-preview.png">
+                <a href="metricas.html"><b>Métricas</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/noticia-icon-removebg-preview.png">
+                <a href="comunidade.html"><b>Comunidade</b></a>
+            </label>
+
+            <label class="link_home">
+                <img src="img/perfil-icons/sair-icon-removebg-preview.png">
+                <a href="index.html"><b>Sair</b></a>
+            </label>
+        </div>
+        
+    </div>
+
+    <div class="conteudo_perfil_resenha_livro">
+
+        <span class="voltar"><a href="recomendacao.html">&larr; <b>Voltar</b></a></span>
+
+        <div class="box-1"><!-- imagens, avaliação e frase do livro -->
+
+            <img src="img/livros/Até o Verão Terminar - Colleen Hoouver.jfif" alt="Até o Verão Terminar">
+            <div class="avaliacao"><strong>Avaliação:</strong><span id="avaliacao_estrela"> &#9733; &#9733; &#9733; &#9733; 4.7</span></div>
+            <div class="frase">&#10077;<i>O amor é como a água. Pode ser tranquilo. Raivoso. Ameaçador. Apaziguante. A água pode ser muitas coisas, mas em todas as suas formas sempre será água.</i>&#10078;</div>
+        </div>
+
+        <div class="box-2"><!-- resenha -->
+            <h4>Resenha: Até o Verão Terminar</h4>
+            <span id="span_resenha">
+                <p>Filha de uma mãe viciada em drogas e um pai ausente, Beyah precisou se virar desde pequena, e é com o próprio esforço que consegue uma bolsa de estudos integral com seu talento para ingressar na faculdade. No entanto, sua vida vira de cabeça para baixo ao perder o pouco que tem, tendo que recorrer a única pessoa que restou. É assim que Beyah vai parar numa praia paradisíaca com a nova família do pai que nunca ouviu falar, onde conhece o vizinho misterioso, rico e bonito chamado Samson. </p>
+                
+                <p>Beyah e Samson possuem segredos e cicatrizes que estão dispostos a esconder às sete chaves, porém, à medida que são reveladas conseguimos entender os motivos para eles serem como são.</p> 
+                
+                <p>Beyah é uma personagem de dar um aperto no coração com tudo que passou em tão tenra idade. No entanto, quando nossa personagem chega no seu novo destino, encontra em Sara, a enteada de seu pai, uma verdadeira amiga em quem confiar. E não só isso, mas também um lar amoroso e digno.</p> 
+                
+                <p>Já com Samson, temos o mocinho misterioso e um tanto desinteressado que desperta a nossa astúcia para desvendarmos seu passado. Mas uma coisa que não podemos negar é que a autora fez de novo: um personagem masculino impecável. Nele encontrei uma boa dose de maturidade, interesse genuíno e um ser humano que dá de si a outros. E bem diferente da Beyah, que é cínica e descrente sobre as boas intenções das pessoas.</p>
+
+            </span>
+
+            <span class="infos_livro">
+
+                <span class="infos">
+                    <p><i><b>Autor:</b><span id="nome_autor"> Colleen Hoouver</span></i></p>
+                    <p><i><b>Gênero:</b><span id="genero_livro"> romance, ficção adolescente</span></i></p> 
+                </span>
+                <span class="links">
+                    <p onclick="favoritar()" id="favoritar_livro"><b>Favoritar &#10084;</b></p>
+
+                    <a href="" id="ver_na_amazon"><b>Ver na Amazon</b></a>
+                </span>
+            </span>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resenha</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="body_explorar resenha_livro">
+    
+    <div class="navegacao_lateral">
+
+        <div class="navegacao_lateral_dropdown">        
+            <label>
+                <img src="img/perfil-icons/perfil-icon-removebg-preview.png">
+                <a href="perfil.html"><b>Perfil</b></a>
+            </label> 
+
+            <label style="border-top: 2px black solid; padding-top: 10px;">
+                <img src="img/perfil-icons/explorar-icon-removebg-preview.png">
+                <a href="explorar.html"><b>Explorar</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/favorito-icon-removebg-preview.png">
+                <a href="favoritos.html"><b>Favoritos</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/dashboard-icon-removebg-preview.png">
+                <a href="metricas.html"><b>Métricas</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/noticia-icon-removebg-preview.png">
+                <a href="comunidade.html"><b>Comunidade</b></a>
+            </label>
+
+            <label class="link_home">
+                <img src="img/perfil-icons/sair-icon-removebg-preview.png">
+                <a href="index.html"><b>Sair</b></a>
+            </label>
+        </div>
+        
+    </div>
+
+    <div class="conteudo_perfil_resenha_livro">
+
+        <span class="voltar"><a href="recomendacao.html">&larr; <b>Voltar</b></a></span>
+
+        <div class="box-1"><!-- imagens, avaliação e frase do livro -->
+
+            <img src="img/livros/Os sete maridos de Evelyn Hugo.jfif" alt="">
+            <div class="avaliacao"><strong>Avaliação:</strong><span id="avaliacao_estrela"> &#9733; &#9733; &#9733; &#9733; &#9733; 4.9</span></div>
+            <div class="frase">&#10077;<i>Por favor, nunca se esqueça de que o sol se levanta e se põe com seu sorriso. Pelo menos para mim. Você é a única coisa nesse mundo que merece devoção.</i>&#10078;</div>
+        </div>
+
+        <div class="box-2"><!-- resenha -->
+            <h4>Resenha: Os sete maridos de Evelyn Hugo</h4>
+            
+            <span id="span_resenha">
+                <p>”Os Sete Maridos de Evelyn Hugo” é uma obra que nos direciona aos bastidores da old Hollywood, onde atrizes e atores de cinema atingiam um status de superstar ao cravar o nome na história do cinema mais badalado do mundo. É nesse cenário em que ocorre a apresentação de Evelyn Hugo, descrita como uma espécie de força da natureza capaz de atrair desejo, inveja, admiração e ódio</p>
+                
+                <p>A atriz, que ao longo de décadas se viu completamente analisada e observada pela crítica e por seus admiradores, incrédulos com a sua beleza, sensualidade e extensa lista de matrimônios — sete, para ser mais precisa — sempre manteve a verdade dos fatos para si, até que decide abrir sua trajetória para o público. Para isso, a protagonista escolheu Monique Grant, uma brilhante, porém subestimada jornalista para registrar mais sobre sua jornada.</p> 
+                
+                <p>Os capítulos são estruturados conforme as entrevistas e nomeados com a identidade de cada um de seus ex-companheiros, mas nos direcionam para algo ainda maior do que apenas o envolvimento com cada um desses homens. O enredo acaba expondo o preço pago pela atriz para chegar ao seu objetivo, mostrando quantas vezes precisou negar sua história e identidade para alcançar o mais absoluto sucesso.</p> 
+                
+            </span>
+           
+            <span class="infos_livro">
+
+                <span class="infos">
+                    <p><i><b>Autor:</b><span id="nome_autor"> Taylor Jenkins Reid</span></i></p>
+                    <p><i><b>Gênero:</b><span id="genero_livro"> romance</span></i></p>
+                </span>
+                <span class="links">
+                    <p onclick="favoritar()" id="favoritar_livro"><b>Favoritar &#10084;</b></p>
+
+                    <a href="" id="ver_na_amazon"><b>Ver na Amazon</b></a>
+                </span>
+            </span>
+        </div>
+
+    </div>
+    
+</body>
+</html>

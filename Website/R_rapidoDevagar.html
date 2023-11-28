@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resenha</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="body_explorar resenha_livro">
+    
+    <div class="navegacao_lateral">
+
+        <div class="navegacao_lateral_dropdown">        
+            <label>
+                <img src="img/perfil-icons/perfil-icon-removebg-preview.png">
+                <a href="perfil.html"><b>Perfil</b></a>
+            </label> 
+
+            <label style="border-top: 2px black solid; padding-top: 10px;">
+                <img src="img/perfil-icons/explorar-icon-removebg-preview.png">
+                <a href="explorar.html"><b>Explorar</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/favorito-icon-removebg-preview.png">
+                <a href="favoritos.html"><b>Favoritos</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/dashboard-icon-removebg-preview.png">
+                <a href="metricas.html"><b>Métricas</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/noticia-icon-removebg-preview.png">
+                <a href="comunidade.html"><b>Comunidade</b></a>
+            </label>
+
+            <label class="link_home">
+                <img src="img/perfil-icons/sair-icon-removebg-preview.png">
+                <a href="index.html"><b>Sair</b></a>
+            </label>
+        </div>
+        
+    </div>
+
+    <div class="conteudo_perfil_resenha_livro">
+
+        <span class="voltar"><a href="recomendacao.html">&larr; <b>Voltar</b></a></span>
+
+        <div class="box-1"><!-- imagens, avaliação e frase do livro -->
+
+            <img src="img/livros/Rápido e devagar, duas formas de pensar.jfif" alt="Rápido e devagar, duas formas de pensar">
+            <div class="avaliacao"><strong>Avaliação:</strong><span id="avaliacao_estrela"> &#9733; &#9733; &#9733; &#9733; 4.7 </span></div>
+            <div class="frase">&#10077;<i>Nos concentramos muito no que conhecemos e ignoramos o que desconhecemos, o que nos faz confiar demais em nossas crenças</i>&#10078;</div>
+        </div>
+
+        <div class="box-2"><!-- resenha -->
+            <h4>Resenha: Rápido e devagar, duas formas de pensar</h4>
+            
+            <span id="span_resenha">
+                <p>O livro é uma interessante jornada pelo funcionamento da mente humana. A partir da década de 70, o autor e seu amigo começaram a estudar como preferências intuitivas violam consistentemente as regras da escolha lógica, mostrando que os humanos não são bem descritos pelo modelo tradicional de agentes racionais.</p>
+                
+                <p>Esta obra traz inúmeros experimentos e reflexões sobre psicologia e tomada de decisões, explorando as peculiaridades e os limites da racionalidade humana.</p> 
+                
+                <p>Kahneman divide a mente em dois personagens fictícios. O sistema 1 é a parte que toma decisões de maneira automática e rápida, e não pode ser desligado. Já o sistema 2 é mais lento e exige esforço e atenção. Quando alguém pergunta quanto é 2 + 2, a resposta provavelmente já aparece na sua cabeça, impulsionada pelo sistema 1. Entretanto, se perguntarem quanto é 17 x 24, o resultado não deverá vir à mente de forma imediata, e você precisará fazer certo esforço, acionando o sistema 2. </p>
+
+                <p>Este livro traz muitas reflexões sobre a maneira como pensamos e tomamos decisões. É inevitável se enxergará em várias das situações mencionadas e analisar de outra forma suas ações, como por exemplo questionar sempre as evidências e buscar pensar mais estatisticamente.</p> 
+                
+                
+            </span>
+            
+            <span class="infos_livro">
+
+                <span class="infos">
+                     <p><i><b>Autor:</b><span id="nome_autor"> Daniel Kahneman</span></i></p>
+                    <p><i><b>Gênero:</b><span id="genero_livro"> desenvolvimento pessoal, não ficção</span></i></p>
+                </span>
+                <span class="links">
+                    <p onclick="favoritar()" id="favoritar_livro"><b>Favoritar &#10084;</b></p>
+
+                    <a href="" id="ver_na_amazon"><b>Ver na Amazon</b></a>
+                </span>
+            </span>
+        </div>
+
+    </div>
+    
+</body>
+</html>

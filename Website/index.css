@@ -994,7 +994,7 @@ footer span{
     width: 1000px;
     height: 100%;
     margin-top: 1rem;
-    margin-right: 6rem;
+    margin-right: 5rem;
 }
 
 /*--------------- BOX-1 -------------------*/
@@ -1047,4 +1047,54 @@ footer span{
     font-size: 15px;
     color: var(--color-black);
     text-align: justify;
+}
+
+/* ----- SPAN - INFOS */
+
+.infos_livro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#favoritar_livro{
+    background-color: var(--color-primary-laranja);
+    color: var(--color-black);
+
+    align-items: center;
+    justify-content: center;
+    padding: 4px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+}
+#ver_na_amazon{
+    background-color: var(--color-primary-azul);
+    color: var(--color-white);
+
+    align-items: center;
+    justify-content: center;
+    padding: 4px 15px;
+    border-radius: 5px;
+}
+
+#ver_na_amazon:hover, #favoritar_livro:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: all 0.2s ease-in-out;
+}
+
+.voltar{
+    align-self: flex-start;
+    justify-self: start;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 85px;
+    
 }

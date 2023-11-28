@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resenha</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="body_explorar resenha_livro">
+    
+    <div class="navegacao_lateral">
+
+        <div class="navegacao_lateral_dropdown">        
+            <label>
+                <img src="img/perfil-icons/perfil-icon-removebg-preview.png">
+                <a href="perfil.html"><b>Perfil</b></a>
+            </label> 
+
+            <label style="border-top: 2px black solid; padding-top: 10px;">
+                <img src="img/perfil-icons/explorar-icon-removebg-preview.png">
+                <a href="explorar.html"><b>Explorar</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/favorito-icon-removebg-preview.png">
+                <a href="favoritos.html"><b>Favoritos</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/dashboard-icon-removebg-preview.png">
+                <a href="metricas.html"><b>Métricas</b></a>
+            </label>
+
+            <label>
+                <img src="img/perfil-icons/noticia-icon-removebg-preview.png">
+                <a href="comunidade.html"><b>Comunidade</b></a>
+            </label>
+
+            <label class="link_home">
+                <img src="img/perfil-icons/sair-icon-removebg-preview.png">
+                <a href="index.html"><b>Sair</b></a>
+            </label>
+        </div>
+        
+    </div>
+
+    <div class="conteudo_perfil_resenha_livro">
+
+        <span class="voltar"><a href="recomendacao.html">&larr; <b>Voltar</b></a></span>
+        
+        <div class="box-1"><!-- imagens, avaliação e frase do livro -->
+
+            <img src="img/livros/A Biblioteca da meia noite.jfif" alt="A Biblioteca da meia noite">
+            <div class="avaliacao"><strong>Avaliação:</strong><span id="avaliacao_estrela"> &#9733; &#9733; &#9733; &#9733; 4.7 </span></div>
+            <div class="frase">&#10077;<i>É uma revelação e tanto descobrir que o lugar para onde você quis fugir é exatamente o mesmo lugar de onde fugiu. Que a prisão não era o lugar, mas a perspectiva.</i>&#10078;</div>
+        </div>
+
+        <div class="box-2"><!-- resenha -->
+            <h4>Resenha: A Biblioteca da meia noite</h4>
+            
+            <span id="span_resenha">
+                <p>Em A Biblioteca da Meia-Noite somos apresentados a Nora Seed, que aos 35 anos está completamente arrependida das escolhas que fez para a sua vida. Ela vive se perguntando que vida poderia ter tido se tivesse feito escolhas diferentes. Em meio a uma sucessão de acontecimentos ruins, Nora se vê completamente sem propósito e decide que não quer mais viver e, então, no exato momento em que toma essa decisão definitiva ela vai parar na Biblioteca da Meia-Noite, um lugar onde o tempo não passa e onde ela terá a possibilidade de viver outras vidas. </p>
+                
+                <p>Na biblioteca, Nora encontra diversos livros, cada um deles contendo uma vida (dela mesma) diferente. Em um, ela é uma nadadora bem-sucedida... em outro, uma rockstar. O mais bacana é: ela pode entrar em cada uma dessas vidas para experimentá-la. Se decidir por ficar, tudo bem.</p> 
+                
+                <p>A bibliotecária explica que assim que ela estivesse confortável na vida que escolhesse, acabaria por esquecer a vida anterior e a própria experiência na Biblioteca da Meia-noite.</p>
+
+                <p>É aí que a mágica acontece: ao transitar por algumas vidas, Nora acaba por entender que em todos os momentos, decepções acontecem. Que a vida pode ter aspectos bons e ruins em uma mesma proporção. E cabe a cada um lidar com esses aspectos da melhor forma possível. </p>
+
+            </span>
+            
+            <span class="infos_livro">
+
+                <span class="infos">
+                     <p><i><b>Autor:</b><span id="nome_autor"> Matt Haig</span></i></p>
+                <p><i><b>Gênero:</b><span id="genero_livro"> ficção</span></i></p>
+                </span>
+                <span class="links">
+                    <p onclick="favoritar()" id="favoritar_livro"><b>Favoritar &#10084;</b></p>
+
+                    <a href="" id="ver_na_amazon"><b>Ver na Amazon</b></a>
+                </span>
+            </span>
+        </div>
+
+    </div>
+    
+</body>
+</html>
