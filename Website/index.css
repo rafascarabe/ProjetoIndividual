@@ -1098,3 +1098,92 @@ footer span{
     width: 85px;
     
 }
+
+
+/* ------------------------------------------------------------------- CONTEÚDO - EXPLORAR -> EVENTOS */
+
+.eventos{
+    background-color: var(--color-secondary-azul);
+}
+
+.conteudo_perfil_eventos{
+    display: flex;
+    flex-direction: row;
+
+    width: 1000px;
+    height: 100%;
+
+    align-items: start;
+    align-self: flex-end;
+    justify-content: start;
+    
+}
+
+.datas{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    margin: 3rem 1.7rem 0 1.7rem;
+    
+}
+
+#lista_datas{
+    font-size: 15px;
+    background-color: var(--color-secondary-laranja);
+    border-radius: 20px;
+    padding: 25px;
+    height: 400px;
+    width: 300px;
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.calendario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    width: 500px;
+    height: 600px;
+    margin: 3rem 1.7rem 0 1.7rem;
+}
+
+.calendario .meses{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.calendario .meses span{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    width: 100px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    margin: 3px;
+    cursor: pointer;
+}
+.calendario .meses span:hover{
+    background-color: var(--color-secondary-laranja);
+    color: var(--color-black);
+    transition: all 0.2s ease-in-out;
+}
+.calendario .meses div{
+    display: flex;
+    flex-direction: row;
+}
+.calendario strong{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#exibir_calendario{
+    width: auto;
+    height: auto;
+}

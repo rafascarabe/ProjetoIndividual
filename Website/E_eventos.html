@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="body_explorar eventos">
+
+<div class="navegacao_lateral">
+
+    <div class="navegacao_lateral_dropdown">        
+        <label>
+            <img src="img/perfil-icons/perfil-icon-removebg-preview.png">
+            <a href="perfil.html"><b>Perfil</b></a>
+        </label> 
+
+        <label style="border-top: 2px black solid; padding-top: 10px;">
+            <img src="img/perfil-icons/explorar-icon-removebg-preview.png">
+            <a href="explorar.html"><b>Explorar</b></a>
+        </label>
+
+        <label>
+            <img src="img/perfil-icons/favorito-icon-removebg-preview.png">
+            <a href="favoritos.html"><b>Favoritos</b></a>
+        </label>
+
+        <label>
+            <img src="img/perfil-icons/dashboard-icon-removebg-preview.png">
+            <a href="metricas.html"><b>Métricas</b></a>
+        </label>
+
+        <label>
+            <img src="img/perfil-icons/noticia-icon-removebg-preview.png">
+            <a href="comunidade.html"><b>Comunidade</b></a>
+        </label>
+
+        <label class="link_home">
+            <img src="img/perfil-icons/sair-icon-removebg-preview.png">
+            <a href="index.html"><b>Sair</b></a>
+        </label>
+    </div>
+    
+</div>
+
+<div class="conteudo_perfil_eventos">
+
+    <div class="datas">
+
+        <span id="lista_datas">
+            <li>20 Janeiro</li>
+            <li>12feve</li>
+            <li>08 maio</li>
+            <li>5</li>
+            <li>Julho</li>
+            
+            
+        </span>
+
+    </div>
+
+    <div class="calendario">
+
+        <strong>Conferir datas de eventos | 2024</strong>
+
+        <span class="meses">
+            <div>
+                <span onclick="exibirJaneiro()"><b>Janeiro</b></span><!-- 31 dias-->
+                <span onclick="exibirFevereiro()"><b>Fevereiro</b></span> <!-- 28 dias-->
+                <span onclick="exibirMarço()"><b>Março</b></span> <!-- 31 dias-->
+                <span onclick="exibirAbril()"><b>Abril</b></span> <!-- 30 dias-->
+            </div>
+            <div>
+                <span onclick="exibirMaio()"><b>Maio</b></span><!-- 31 dias-->
+                <span onclick="exibirJunho()"><b>Junho</b></span> <!-- 30 dias-->
+                <span onclick="exibirJulho()"><b>Julho</b></span> <!-- 31 dias-->
+                <span onclick="exibirAgosto()"><b>Agosto</b></span> <!-- 31 dias-->
+            </div>
+            <div>
+                <span onclick="exibirSetembro()"><b>Setembro</b></span> <!-- 30 dias-->
+                <span onclick="exibirOutubro()"><b>Outubro</b></span> <!-- 31 dias-->
+                <span onclick="exibirNovembro()"><b>Novembro</b></span> <!-- 30 dias-->
+                <span onclick="exibirDezembro()"><b>Dezembro</b></span> <!-- 31 dias-->
+            </div>
+            
+        </span>
+
+        <span id="exibir_calendario" >
+
+        </span>
+
+    </div>
+
+</div>
+    
+</body>
+</html>
+<style>
+    .dia{
+        border: 0.5px solid black; 
+        background-color: white; 
+        width: 40px; height: 40px; 
+        font-size: 35px; 
+        /*display: flex; justify-content: center; align-items: center; flex-direction: row;*/
+        cursor: pointer;
+    }
+
+    .semana{
+        border: 0.5px solid black; 
+        background-color: #274653; 
+        width: 40px; height: 20px; font-size: 30px;
+        border-radius: 10px; 
+        /*display: flex; justify-content: center; align-items: center; flex-direction: row;*/
+    }
+
+</style>
+<script>
+
+
+    function exibirJaneiro(){ //31 dias
+        var dias = 31;
+
+        exibir_calendario.innerHTML = "";
+        exibir_calendario.innerHTML += `
+        <span class="semana">Domingo</span>
+        <span class="semana">Segunda</span>
+        <span class="semana">Terça</span>
+        <span class="semana">Quarta</span>
+        <span class="semana">Quinta</span>
+        <span class="semana">Sexta</span>
+        <span class="semana">Sábado</span> <br>
+        `
+        
+        for(var posicao = 0; posicao < dias; posicao += 1){
+
+            if(posicao % 7 == 0){
+                exibir_calendario.innerHTML += `<br>`
+            }
+            exibir_calendario.innerHTML += `
+            <span class="dia" onclick="evento()">
+                ${posicao+1}
+            </span>`
+        }
+    } 
+
+    function exibirFevereiro() {// 28 dias
+        var dias = 28;
+    }
+
+    function exibirMarço() {//31 dias
+        var dias = 31;
+    }
+
+    function exibirAbril() {// 30 dias
+        var dias = 30;
+    }
+
+    function exibirMaio() {//31 dias
+        var dias = 31;
+    }
+
+    function exibirJunho() {// 30 dias
+        var dias = 30;
+    }
+
+    function exibirJulho() {//31 dias
+         var dias = 31;
+    }
+
+    function exibirAgosto() {// 31 dias
+        var dias = 31;
+    }
+
+    function exibirSetembro() {// 30 dias
+        var dias = 30;
+    }
+
+    function exibirOutubro() {// 31 dias
+        var dias = 31; 
+    }
+
+    function exibirNovembro() {// 30 dias
+        var dias = 30;
+    }
+
+    function exibirDezembro() {// 31 dias
+         var dias = 31;
+    }
+
+                
+                
+                
+</script>
