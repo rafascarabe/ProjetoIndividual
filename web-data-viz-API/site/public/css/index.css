@@ -18,6 +18,7 @@
     justify-content: center;
     flex-direction: column;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .header_home{
@@ -28,6 +29,7 @@
     margin: 0;
     width: 96%;
     height: 5rem;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
@@ -43,6 +45,7 @@ a{
     color: var(--color-black);
     font-size: 20px;
     margin-right: 2.5rem;
+    scroll-behavior: smooth;
 }
 
 .header_home .nav .entrar{
@@ -654,38 +657,34 @@ footer span{
 /* ------------------------------------------ CONTEÚDO - EXPLORAR */
 
 .conteudo_perfil_explorar{
-    width: 90%;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
     padding-top: 4rem;
-    margin-right: 8rem;
+    margin-right: 4rem;
     margin-top: 2rem;
 }
 
-.conteudo_perfil_explorar .container .cards .card{
-    cursor: pointer;
+.conteudo_perfil_explorar .container .cards .card:hover{
+    background-color: var(--color-primary-laranja);
     transition: all 0.2s ease-in-out;
-
-    margin-left: 2.75rem;
-    margin-right: 2.75rem;
 }
-
 
 .conteudo_perfil_explorar .container .cards{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: start;
-    height: 300px;
-    width: 950px;
+    height: auto;
+    width: auto;
 }
 
 .conteudo_perfil_explorar .container .cards .card{
-    height: 240px;
-    width: 420px;
+    height: 350px;
+    width: 280px;
 
     display: flex;
     justify-content: start;
@@ -693,38 +692,35 @@ footer span{
     flex-direction: column;
     
     border-radius: 20px;
-    padding: 8px;
+    padding: 10px;
     box-shadow: #363636 2px 8px 8px 2px;
     background-color: var(--color-white);
 
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
-/*
-.container .cards .card:has(img:hover) img:not(:hover){
-    scale:.9;
-    opacity: .7;
-}*/
 
 .conteudo_perfil_explorar .container .cards .card strong{
-    font-size: 20px; 
+    font-size: 30px; 
     margin-bottom: .5px;
-    
 }
 .conteudo_perfil_explorar .container .cards .card p{
-    font-size: 13px;
+    font-size: 16px;
     margin-top: 0;
 }
 
-.conteudo_perfil_explorar .c3 img, .c6 img{
-    height: 160px;
-    width: 420px;
+.conteudo_perfil_explorar img{
+    height: 200px;
+    width: 280px;
     border-radius: 20px;
     object-fit: cover;
     margin: 0, 0, 8px, 0; /*em cima - direita - embaixo - esquerda*/
 }
-.conteudo_perfil_explorar .c3 .texto-card{
-    width: 420px;
+.conteudo_perfil_explorar .texto-card{
+    width: 280px;
     display: flex;
     justify-content: start;
     align-items: start;
@@ -786,7 +782,7 @@ footer span{
     box-shadow: var(--color-black) 2px 6px 6px 2px;
     
     margin: 0.5rem 0 0.5rem 0; /*em cima - direita - embaixo - esquerda*/
-    
+    cursor: pointer;
 }
 
 .generos_musicais span p{
@@ -824,7 +820,7 @@ footer span{
     background-color: #121212;
     color: var(--color-white);
 
-    margin: 1rem 2rem 0 2rem; /*em cima - direita - embaixo - esquerda*/
+    margin: 1rem 1rem 0 1rem; /*em cima - direita - embaixo - esquerda*/
 }
 .playlist .card p, .playlist .card b{
     font-size: 13px;
@@ -880,8 +876,11 @@ footer span{
     /*align-content: end; 
     align-self: end;*/
     width: auto;
-    height: 100%;
-    margin-right: 4.5rem;
+    height: 107%;
+    margin-right: 1.5rem;
+    overflow-y: auto;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
 }
 
 .conteudo_perfil_recomendacao{
@@ -1100,90 +1099,79 @@ footer span{
 }
 
 
-/* ------------------------------------------------------------------- CONTEÚDO - EXPLORAR -> EVENTOS */
+/* ------------------------------------------------------------------- CONTEÚDO - EXPLORAR -> ENTREVISTAS */
 
-.eventos{
+.entrevistas{
     background-color: var(--color-secondary-azul);
 }
 
-.conteudo_perfil_eventos{
+.conteudo_perfil_entrevistas{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 105%;
+
+    align-items: end;
+    justify-content: start;
+    overflow-y: auto;
+    padding: 0.5rem 2rem 1rem 1rem;
+    margin-right: 1rem;
+}
+
+.noticia{
     display: flex;
     flex-direction: row;
+    align-items: center;
 
-    width: 1000px;
-    height: 100%;
+    height: auto;
+    width: 950px;
+    background-color: var(--color-white);
+    color: var(--color-black);
 
-    align-items: start;
-    align-self: flex-end;
-    justify-content: start;
-    
-}
-
-.datas{
-    justify-content: center;
-    display: flex;
-    height: 100%;
-    margin: 3rem 1.7rem 0 1.7rem;
-    
-}
-
-#lista_datas{
-    font-size: 15px;
-    background-color: var(--color-secondary-laranja);
+    margin-top: 1.5rem;
     border-radius: 20px;
-    padding: 25px;
-    height: 400px;
-    width: 300px;
+    padding: 20px 30px;
+    text-align: justify;
+}
+
+.noticia img{
+    width: 250px;
+    height: 80%;
+    object-fit: cover;
+    padding-right: 20px;
+}
+
+.entrevista{
+    display: flex;
+    flex-direction: column;
     align-items: start;
     justify-content: start;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
 }
 
-.calendario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+.entrevista a{
+    background-color: var(--color-primary-laranja);
+    color: var(--color-black);
 
-    width: 500px;
-    height: 600px;
-    margin: 3rem 1.7rem 0 1.7rem;
-}
-
-.calendario .meses{
-    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-
+    padding: 4px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
 }
 
-.calendario .meses span{
+.entrevista a:hover{
     background-color: var(--color-black);
     color: var(--color-white);
-    width: 100px;
-    height: 20px;
-    padding: 5px;
-    border-radius: 8px;
-    margin: 3px;
-    cursor: pointer;
-}
-.calendario .meses span:hover{
-    background-color: var(--color-secondary-laranja);
-    color: var(--color-black);
-    transition: all 0.2s ease-in-out;
-}
-.calendario .meses div{
-    display: flex;
-    flex-direction: row;
-}
-.calendario strong{
-    font-size: 25px;
-    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;  
 }
 
-#exibir_calendario{
-    width: auto;
-    height: auto;
+.entrevista p{
+    font-size: 12px;
+}
+
+.entrevista strong{
+    font-size: 22px;
 }

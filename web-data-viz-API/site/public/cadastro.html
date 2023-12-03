@@ -48,6 +48,10 @@
         <button onclick="cadastrar()">CADASTRAR</button>
 
         <span>Já tem uma conta? <a href="login.html" style="color: #319D8F;">Fazer login</a></span>
+
+        <div id="div_aguardar" class="loading-div">
+            <img src="assets/img/circle-loading.gif" style="width: 5px;" id="loading-gif" />
+        </div>
     </div>
 
 </body>
@@ -55,6 +59,11 @@
 
 <script>
     function cadastrar(){
+        aguardar();
+
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
         var nome = nome_input.value;
         var nomeUsuario = nome_usuario_input.value;
         var email = email_input.value;
@@ -62,21 +71,90 @@
         var senha = senha_input.value;
         var confirmarSenha = senha_confirmar_input.value;
 
-        if(nomeUsuario == '' || nomeUsuario.trim() == '' || senha == '' || senha.trim() == '' || email == '' || email.trim() == '' || confirmarEmail == '' || confirmarEmail.trim() == '' || nome == '' || nome.trim() == '' || confirmarSenha == '' || confirmarSenha.trim() == '' ){
+        if(nomeUsuario == '' || nomeUsuario.trim() == '' || 
+        senha == '' || senha.trim() == '' || 
+        email == '' || email.trim() == '' || 
+        confirmarEmail == '' || confirmarEmail.trim() == '' || 
+        nome == '' || nome.trim() == '' || 
+        confirmarSenha == '' || confirmarSenha.trim() == '' ){
 
             mensagem_erro.innerHTML = `&#10008; Preencha todas as informações`;
         
         } else if(senha.length <= 6){
             mensagem_erro.innerHTML = `&#10008; A senha deve ter 6 ou mais dígitos`;
+            finalizarAguardar();
+            return false;
         } else if(senha != confirmarSenha){
             mensagem_erro.innerHTML = `&#10008; A senha de confirmação difere da senha inserida`;
+            finalizarAguardar();
+            return false;
         } else if(email != confirmarEmail){
             mensagem_erro.innerHTML = `&#10008; O e-mail de confirmação difere do e-mail inserido`;
-        }else {
-            // Aguardar 2 segundos antes de redirecionar para a página de perfil
-          setTimeout(function () {
-            window.location.href = 'perfil.html'; 
-          }, 2000); // 5000 milissegundos = 5 segundos
-        }
+            finalizarAguardar();
+            return false;
+        } else {
+      setInterval(sumirMensagem, 5000);
     }
+        
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nome,
+        nomeUsuarioServer: nomeUsuario,
+        emailServer: email,
+        senhaServer: senha,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");  // Aguardar 2 segundos antes de redirecionar para a página de perfil
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function listar() {
+    fetch("/empresas/listar", {
+      method: "GET",
+    })
+      .then(function (resposta) {
+        resposta.json().then((empresas) => {
+          empresas.forEach((empresa) => {
+            listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+          });
+        });
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+
+    
 </script>
