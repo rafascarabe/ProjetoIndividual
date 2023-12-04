@@ -3,12 +3,12 @@ var quizModel = require("../models/quizModel");
 function cadastro_pontuacao(req, res) {
     console.log(`teste1`)
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var id_do_usuario_sendo_puxada = req.body.idusuarioServer;
-    var pontuacao_usuario_sendo_puxada = req.body.pontuacaoServer;
+    var id_do_usuario = req.body.idusuarioServer;
+    var pontuacao_usuario = req.body.pontuacaoServer;
 
 
     // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-    quizModel.insert_pontuacao(id_do_usuario_sendo_puxada, pontuacao_usuario_sendo_puxada)
+    quizModel.insert_pontuacao(id_do_usuario, pontuacao_usuario)
         .then(
             function (resultado) {
                 res.json(resultado);
@@ -27,9 +27,9 @@ function cadastro_pontuacao(req, res) {
 }
 function listar_pontuacao(req, res) {
 
-    var pontuacao_usuario = req.params.pontuacao;
+    var exibir_pontuacao_usuario = req.params.pontuacao;
 
-    quizModel.listar_pontuacao(pontuacao_usuario).then((resultado) => {
+    quizModel.listar_pontuacao(exibir_pontuacao_usuario).then((resultado) => {
         res.status(200).json(resultado);
     });
 }

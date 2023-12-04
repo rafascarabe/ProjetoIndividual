@@ -1,27 +1,7 @@
 create database universoLITERARIO;
 use universoLITERARIO;
 
-CREATE TABLE usuario (
-id INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(50),
-email VARCHAR(45) NOT NULL UNIQUE,
-telefone CHAR(9),
-nomeUsuario VARCHAR(30) NOT NULL UNIQUE,
-senha VARCHAR(30) NOT NULL
-) AUTO_INCREMENT = 100;
 
-SELECT*FROM usuario;
-
--- ----------------------------------------------------------------------- NEWSLETTER
-CREATE TABLE newsletter(
-idAssinante INT PRIMARY KEY AUTO_INCREMENT,
-nome VARCHAR(50),
-email VARCHAR(45) NOT NULL UNIQUE,
-fkUSUARIO INT, -- não é obrigatório preencher 
-	CONSTRAINT newsletter FOREIGN KEY (fkUSUARIO) REFERENCES usuario(idUsuario)
-);
-
-SELECT*FROM newsletter;
 -- --------------------------------------------------------------------------- LIVRO
 CREATE TABLE livro (
 idLivro INT PRIMARY KEY AUTO_INCREMENT,
@@ -48,26 +28,40 @@ INSERT INTO livro VALUES
 
 SELECT*FROM livro;
 
--- -------------------------------------------------------------------------- FAVORITADOS
-CREATE TABLE favoritados (
-fkUSUARIO INT,
-fkLIVRO INT,
-PRIMARY KEY (fkUSUARIO, fkLIVRO),
-	CONSTRAINT favoritados FOREIGN KEY (fkUSUARIO) REFERENCES usuario(idUsuario),
-    CONSTRAINT favoritado FOREIGN KEY (fkLIVRO) REFERENCES livro(idLivro)
+-- --------------------------------------------------------------------------- USUARIO
+CREATE TABLE usuario (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+email VARCHAR(45) NOT NULL UNIQUE,
+telefone CHAR(9),
+nomeUsuario VARCHAR(30) NOT NULL UNIQUE,
+senha VARCHAR(30) NOT NULL,
+fkLIVRO INT,  
+	CONSTRAINT livro FOREIGN KEY (fkLIVRO) REFERENCES livro(idLivro)
+) AUTO_INCREMENT = 100;
+
+SELECT*FROM usuario;
+
+-- ----------------------------------------------------------------------- NEWSLETTER
+CREATE TABLE newsletter(
+idAssinante INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50),
+email VARCHAR(45) NOT NULL UNIQUE,
+fkUSUARIO INT, -- não é obrigatório preencher 
+	CONSTRAINT newsletter FOREIGN KEY (fkUSUARIO) REFERENCES usuario(id)
 );
 
-SELECT*FROM favoritados;
--- -------------------------------------------------------------------------- COMENTÁRIO
-CREATE TABLE comentario (
-idComentario INT PRIMARY KEY AUTO_INCREMENT,
-forum VARCHAR(45),
+SELECT*FROM newsletter;
+
+-- -------------------------------------------------------------------------- QUIZ
+CREATE TABLE quiz (
+idQuiz INT PRIMARY KEY AUTO_INCREMENT,
 fkUSUARIO INT,
-comentario VARCHAR(500),
-	CONSTRAINT comentario FOREIGN KEY (fkUSUARIO) REFERENCES usuario(idUsuario)
+pontuacao VARCHAR(45),
+	CONSTRAINT quiz FOREIGN KEY (fkUSUARIO) REFERENCES usuario(id)
 );
 
-SELECT*FROM comentario;
+SELECT*FROM quiz;
 
 
 

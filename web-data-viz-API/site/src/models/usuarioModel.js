@@ -9,17 +9,6 @@ function autenticar(nomeUsuario, senha) {
     return database.executar(instrucao);
 }
 
-
-function favoritar(id, idLivro){
-    var instrucao = ` 
-        INSERT INTO favoritados (fkUSUARIO, fkLIVRO) VALUES ('${id}', '${idLivro_favorito}');`
-        ;
-
-        console.log("Executando a instrução SQL favoritar: \n" + instrucao);
-    return database.executar(instrucao);
-}
-
-
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
 function cadastrar(nome, email, telefone, nomeUsuario, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
@@ -36,5 +25,4 @@ function cadastrar(nome, email, telefone, nomeUsuario, senha) {
 module.exports = {
     autenticar,
     cadastrar,
-    favoritar
 };
