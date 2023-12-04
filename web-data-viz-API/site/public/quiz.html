@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comunidade</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" type="image/png" href="assets/img/logo.png"/>
 
@@ -294,11 +294,11 @@ function enviarparadiv() {
 }
 function plotarGrafico(resposta){
 
-  resultados.innerHTML=`1º: ${resposta[2].nome} <br>
-                        Nota: ${resposta[2].pontuacao} <br><br>
-                        2º: ${resposta[1].nome} <br>
-                        Nota: ${resposta[1].pontuacao}<br><br>
-                        3º: ${resposta[0].nome} <br>
+  resultados.innerHTML=`1º Colocado: ${resposta[2].nome} <br>
+                        Nota: ${resposta[2].pontuacao} <br><br><hr>
+                        2º Colocado: ${resposta[1].nome} <br>
+                        Nota: ${resposta[1].pontuacao}<br><br><hr>
+                        3º Colocado: ${resposta[0].nome} <br>
                         Nota: ${resposta[0].pontuacao}<br>
                         `
 }
