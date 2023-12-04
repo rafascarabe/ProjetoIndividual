@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="body_perfil">
+    <div class="navegacao_lateral">
+
+        <div class="navegacao_lateral_dropdown">        
+            <label>
+                <img src="assets/img/perfil-icons/perfil-icon-removebg-preview.png">
+                
+            </label> 
+
+            <label style="border-top: 2px black solid; padding-top: 10px;">
+                <img src="assets/img/perfil-icons/explorar-icon-removebg-preview.png">
+                <a href="explorar.html">Explorar</a>
+            </label>
+
+            <label>
+                <img src="assets/img/perfil-icons/favorito-icon-removebg-preview.png">
+                <a href="favoritos.html">Favoritos</a>
+            </label>
+
+            <label>
+                <img src="assets/img/perfil-icons/dashboard-icon-removebg-preview.png">
+                <a href="metricas.html">Métricas</a>
+            </label>
+
+            <label>
+                <img src="assets/img/perfil-icons/noticia-icon--laranja-removebg-preview.png">
+                <a href="#" style="color:#E57056">Quiz</a>
+            </label>
+
+            <label class="link_home">
+                <img src="assets/img/perfil-icons/sair-icon-removebg-preview.png">
+                <a href="index.html"><b>Sair</b></a>
+            </label>
+        </div>
+        
+    </div>
+    
+    <div class="conteudo_perfil_quiz">
+        <div class="container">
+            <div class="questions-container hide">
+              <span class="question">Pergunta</span>
+              <div class="answers-container">
+                <button class="answer button">Resposta</button>
+                <button class="answer button">Resposta</button>
+                <button class="answer button">Resposta</button>
+                <button class="answer button">Resposta</button>
+              </div>
+            </div>
+            <div class="controls-container">
+              <span class="title">Tente acertar o nome dos livros<br>apenas pela descrição</span>
+              <button class="start-quiz button">Inicar Quiz!</button>
+              <button class="next-question button hide">Próximo</button>
+            </div>
+        
+            <div id="resultados" class="ranking">
+        
+            </div>
+          </div>
+        
+</body>
+</html>
+
+
+<script>
+
+    /* criação de variaveis que nao mudam de valor */
+
+const startGameButton = document.querySelector(".start-quiz")
+const botao_prox_questao = document.querySelector(".next-question")
+const questionsContainer = document.querySelector(".questions-container")
+const questionText = document.querySelector(".question")
+const answersContainer = document.querySelector(".answers-container")
+const answers = document.querySelectorAll(".answer")
+const questionTitle = document.querySelector(".title")
+
+let questao_atual = 0
+let acertos = 0
+
+
+
+const questions = [
+  {
+    question: "É um romance entre dois adolescentes com doenças graves, no qual o garoto morre no final. Qual é o best-seller?",
+    answers: [
+      { text: "A cinco passo de você - Rachael Lippincott", correct: false },
+      { text: "O sol também é uma estrela - Rachael Lippincott", correct: false },
+      { text: "A culpa é das estrelas - John Green", correct: true },
+      { text: "Se eu ficar - Gayle Forman", correct: false }
+    ]
+  },
+  {
+    question: "Uma garota precisa competir por sua sobrevivência e acaba levando ao início de uma revolução. Qual o livro?",
+    answers: [
+      { text: "Jogos vorazes - Suzanne Collins", correct: true },
+      { text: "Rainha Vermelha - Victoria Aveyard", correct: false },
+      { text: "Maze Runner - James Dashner", correct: false },
+      { text: "Divergente - Veronica Roth", correct: false }
+    ]
+  },
+  {
+    question: '"Abnegação é o que eu sou. É o que sou quando não estou pensando no que estou fazendo. Qual o livro?"',
+    answers: [
+      { text: 'Authentic games', correct: false },
+      { text: 'Rainha vermelha', correct: false },
+      { text: 'Forrest gump', correct: false },
+      { text: 'Divergente', correct: true }
+    ]
+  },
+  {
+    question: 'Uma menina paquistanesa, do qual seu sonho era ir pra escola. Quando tinha dez anos, a cidade foi controlada por extremistas do Talibã, então ela criou um blog onde contava tudo o que acontecia. Qual o livro?',
+    answers: [
+      { text: 'A menina que roubava livros', correct: false },
+      { text: 'A menina que queria ir pra escola', correct: false },
+      { text: 'Malala', correct: true },
+      { text: 'Anne Frank', correct: false }
+    ]
+  },
+  {
+    question: 'Qual o livro em que o personagem mora em um planeta acompanhado por uma rosa?',
+    answers: [
+      { text: 'A Bela e a Fera', correct: false },
+      { text: 'O Pequeno Príncipe', correct: true },
+      { text: 'Meu pé de Laranja Lima', correct: false },
+      { text: 'O Cravo e a Rosa', correct: false }
+    ]
+  },
+  {
+    question: 'Saga de livros que contam a história de um menino órfão que estuda em uma escola pra aprender feitiços',
+    answers: [
+      { text: 'Saga Harry Potter', correct: true },
+      { text: 'Saga Percy Jackson', correct: false },
+      { text: 'Saga Mazy Runner', correct: false },
+      { text: 'Saga Divergente', correct: false },
+    ]
+  },
+
+]
+
+startGameButton.addEventListener("click", startGame)
+botao_prox_questao.addEventListener("click", mostrar_prox_pergunta)
+
+function startGame() {
+  startGameButton.classList.add("hide") /* esconde o botao inicial */
+  questionTitle.classList.add("hide")
+  questionsContainer.classList.remove("hide") /* mostra as perguntas */
+  mostrar_prox_pergunta()
+}
+
+/* funcao para aparecer a proxima pergunta */
+
+function mostrar_prox_pergunta() {
+  reiniciando()
+  
+  if (questions.length === questao_atual) { /* caso a quantidade de questoes seja == nossa variavel que informa em qual questao está, ele retorna para a funcao de finalizar o quiz*/
+    return finalizar_quiz()
+  }
+
+  questionText.textContent = questions[questao_atual].question
+  questions[questao_atual].answers.forEach(answer => {
+    const nova_resposta = document.createElement("button")
+    nova_resposta.classList.add("button", "answer")
+    nova_resposta.textContent = answer.text
+
+    /* adicionando uma informação pro botao, caso ele seja correto é possivel conseguir recuperar esse dado */
+    if (answer.correct) {
+      nova_resposta.dataset.correct = answer.correct
+    }
+    answersContainer.appendChild(nova_resposta) /* adicionando outro filho para a div, mostrando a nova pergunta */
+
+    nova_resposta.addEventListener("click", resposta_escolhida) /*quando o usuario clicar, verifica se escolheu a resposta certa*/
+  })
+}
+
+/* funcao que seta todos os comandos ao iniciar uma pergunta do quiz */
+function reiniciando() {
+  while(answersContainer.firstChild) {
+    answersContainer.removeChild(answersContainer.firstChild)
+  }
+
+  botao_prox_questao.classList.add("hide") /* esconde o botao de proxima pergunta */
+}
+
+function resposta_escolhida(event) {
+  const resposta_clicada = event.target /* informa o botao clicado */
+
+  if (resposta_clicada.dataset.correct) {
+    acertos++
+  }
+
+  document.querySelectorAll(".answer").forEach(button => {
+    button.disabled = true /* não deixar o usuario clicar em outro botao apos ja ter escolhido */
+
+    if (button.dataset.correct) {
+      button.classList.add("correct")
+    } else {
+      button.classList.add("incorrect")
+    }
+  })
+  
+  botao_prox_questao.classList.remove("hide")
+  questao_atual++
+}
+/* função de finalização, retorna os resultados do desempenho do usuario */
+function finalizar_quiz() {
+  const totalQuestions = questions.length
+  const performance = Math.floor(acertos * 100 / totalQuestions) /* transformando em porcentagem e arrendondando o resultado */
+  
+  let message = "" /* não entra no inner.html por conta de ser uma variável que existe no span do questions container */
+
+  switch (true) { /* condição, similar ao else if */
+    case (performance >= 90):
+      message = "Parábens, Você é uma inspiração quando se fala de leitura!"
+      break
+    case (performance >= 70):
+      message = "Incrível, Você deve ler bastante."
+      break
+    case (performance >= 50):
+      message = "Ler para você deve ser um hobbie, né?!"
+      break
+    default: 
+      message = "Poxa, Leia com mais frequência e tente novamente"
+  }
+
+  /* mostrando o resultado, o desempenho e a opção para o usuario refazer o teste atraves do window.location.reload() */
+  questionsContainer.innerHTML = 
+  `
+    <p class="final-message">
+      Você acertou ${acertos}/ ${totalQuestions} questões...
+      <span>${message} </span>
+    </p>
+  
+  `
+    enviando_resultado()
+}
+ 
+
+
+function enviando_resultado() {
+  console.log(`acertos`)
+  var ss_idusuario = sessionStorage.ID_USUARIO; // pegando o id q ta salvo no navegador
+  // Enviando o valor da nova input
+  fetch("/quiz/cadastro_pontuacao/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      pontuacaoServer: acertos, //linha que eu quero e pontuacao é a coluna que eu quero do 
+      idusuarioServer: ss_idusuario //
+    }),
+  })
+  enviarparadiv()
+}
+/* função criada para pegar o resultado e enviar ao grafico */
+
+function enviarparadiv() {
+
+
+  fetch(`/quiz/listar_pontuacao`,
+  { cache: 'no-store' })
+
+  .then(function (response) {
+      if (response.ok) {
+          response.json().then(function (resposta) {
+              console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+              resposta.reverse();
+
+              plotarGrafico(resposta);
+
+          });
+      } else {
+          console.error('Nenhum dado encontrado ou erro na API');
+      }
+  })
+      .catch(function (error) {
+          console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      });
+}
+function plotarGrafico(resposta){
+
+  resultados.innerHTML=`1º: ${resposta[2].nome} <br>
+                        Nota: ${resposta[2].pontuacao} <br><br>
+                        2º: ${resposta[1].nome} <br>
+                        Nota: ${resposta[1].pontuacao}<br><br>
+                        3º: ${resposta[0].nome} <br>
+                        Nota: ${resposta[0].pontuacao}<br>
+                        `
+}
+
+
+</script>
