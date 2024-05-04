@@ -1,0 +1,76 @@
+/* ------------------------------------------------------------------- MARK: CONTEÚDO - EXPLORAR -> ENTREVISTAS */
+
+.entrevistas{
+    background-color: var(--color-secondary-azul);
+}
+
+.conteudo_perfil_entrevistas{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 105%;
+
+    align-items: end;
+    justify-content: start;
+    
+    padding: 0.5rem 2rem 1rem 1rem;
+    margin-right: 1rem;
+}
+
+.noticia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: auto;
+    width: 950px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    margin-top: 1.5rem;
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: justify;
+}
+
+.noticia img{
+    width: 250px;
+    height: 80%;
+    object-fit: cover;
+    padding-right: 20px;
+}
+
+.entrevista{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+}
+
+.entrevista a{
+    background-color: var(--color-primary-laranja);
+    color: var(--color-black);
+
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.entrevista a:hover{
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: all 0.2s ease-in-out;  
+}
+
+.entrevista p{
+    font-size: 12px;
+}
+
+.entrevista strong{
+    font-size: 22px;
+}

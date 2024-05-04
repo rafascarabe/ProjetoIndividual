@@ -67,7 +67,7 @@ a{
     background-color: var(--color-primary-laranja);
     color: var(--color-black);
 }
-/* ------------------------------------------ BOX-1 - INDEX*/
+/* ------------------------------------------ MARK: BOX-1 - INDEX*/
 .body-index .box-1{
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ a{
     font-size: 18px;
 }
 
-/* ------------------------------------------ BOX-2 - INDEX*/
+/* ------------------------------------------ MARK: BOX-2 - INDEX*/
 .body-index .box-2{
     display: flex;
     align-items: start;
@@ -200,7 +200,7 @@ a{
     flex-direction: column;
     margin: 0;
 }
- /* ------------------------------------------------------ TÓPICOS (BOX-2) - INDEX */
+ /* ------------------------------------------------------ MARK: TÓPICOS (BOX-2) - INDEX */
 .topicos{
     height: auto;
     width: 300px; max-width: 750px;
@@ -277,7 +277,7 @@ a{
 .topicos.active  #sinopse_livro::before{
     visibility: hidden;
 }
-/* ------------------------------------------------------------------------ FOOTER - INDEX */
+/* ------------------------------------------------------------------------ MARK: FOOTER - INDEX */
 footer{
     width: 100%;
     height: auto;
@@ -386,7 +386,7 @@ footer span{
   background-color: var(--color-secondary-laranja);
 }
 
-/* object-fit: cover;------------------------------------------ BODY - LOGIN e CADASTRO */
+/* object-fit: cover;------------------------------------------ MARK: BODY - LOGIN e CADASTRO */
 
 .body-login, .body-cadastro{
     background-image: url(background-cadastro-login.jpg);
@@ -520,7 +520,7 @@ footer span{
 .dropdown:hover .dropdown-menu{ /*quando passar o mouse no 'dropdown' uma ação será realizada no 'dropdown-menu'*/
     display: block;
 }
-/* ------------------------------------------ CONTEÚDO - OBJETIVOS */
+/* ------------------------------------------ MARK: CONTEÚDO - OBJETIVOS */
 
 .box-3{
     display: flex;
@@ -589,7 +589,7 @@ footer span{
     margin: 0;
 }
 
-    /* ----------------------------------------------- NAVEGAÇÃO LATERAL - PERFIL / EXPLORAR / FAVORITOS / MÉTRICAS / NOTÍCIAS */
+    /* ----------------------------------------------- MARK: NAVEGAÇÃO LATERAL - PERFIL / EXPLORAR / FAVORITOS / MÉTRICAS / NOTÍCIAS */
 
 .body_perfil{
     margin: 0;
@@ -607,7 +607,7 @@ footer span{
     flex-direction: column;
     width: auto;
     height: 100%;
-
+    position: fixed;
     background-color: var(--color-white);
     border-radius: 0 20px 20px 0;
     padding: 50px 20px 20px 20px;
@@ -654,7 +654,7 @@ footer span{
     text-decoration: none;
     color: var(--color-black);
 }
-/* ------------------------------------------ CONTEÚDO - EXPLORAR */
+/* ------------------------------------------ MARK: CONTEÚDO - EXPLORAR */
 
 .conteudo_perfil_explorar{
     width: 100%;
@@ -728,7 +728,7 @@ footer span{
     margin: 0;
 }
 
-/* ----------------------------------------------------------------- CONTEÚDO - EXPLORAR -> SPOTIFY */
+/* ----------------------------------------------------------------- MARK: CONTEÚDO - EXPLORAR -> SPOTIFY */
 .body_explorar {
     margin: 0;
     box-sizing: border-box;
@@ -860,443 +860,3 @@ footer span{
     align-self: center;
     justify-self: center;
 }
-
-/* ----------------------------------------------------------------- CONTEÚDO - EXPLORAR -> RECOMENDAÇÃO */
-
-.recomendaçao{
-    background-color: var(--color-secondary-laranja);
-    justify-content: space-between;
-}
-
-.recomendaçao .conteudo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    /*align-content: end; 
-    align-self: end;*/
-    width: auto;
-    height: 107%;
-    margin-right: 1.5rem;
-    overflow-y: auto;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
-}
-
-.conteudo_perfil_recomendacao{
-    width: auto;
-    height: 100%;
-
-    display: flex;
-    align-items: end;
-    align-self: flex-end;
-    justify-content: start;
-    flex-direction: column;
-
-    margin-top: 1rem;
-    
-}
-
-.conteudo_perfil_categorias{
-    width: auto;
-    height: 100%;
-
-    display: flex;
-    align-items: end;
-    justify-content: start;
-    flex-direction: column;
-    justify-self: end;
-
-    margin-top: 1rem;
-    
-}
-
-.conteiner_recomendados{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-
-    width: auto;
-    height: 255px;
-
-    background-color: var(--color-white);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.conteiner_categorias{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-
-    width: auto;
-    height: 270px;
-
-    background-color: var(--color-white);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.conteiner_recomendados .stand, .conteiner_categorias .stand{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.conteiner_recomendados .livro a, .conteiner_categorias .livro a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: 130px;
-    height: 200px;
-
-    border-radius: 5px;
-    box-shadow: #dfdddd 0.5px 2px 2px 0.5px;
-    background-color: var(--color-white);
-    
-    
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 5px;
-}
-
-.conteiner_recomendados .livro a img, .conteiner_categorias .livro a img{
-    width: 80%;
-    height: 150px;
-    object-fit: cover;
-    box-shadow: #363636 1px 4px 4px 1px;
-    margin-bottom: 8px;
-}
-
-.stand .livro strong, .stand .livro strong{
-    font-size: 12px;
-    color: var(--color-black);
-}
-.stand .livro p{
-    font-size: 10px;
-    color: var(--color-black);
-}
-
-/* ----------------------------------------------------------------- CONTEÚDO - EXPLORAR -> RESENHA_LIVRO */
-.resenha_livro{
-    background-color: #eceaea;
-    justify-content: space-between;
-}
-
-.conteudo_perfil_resenha_livro{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: end;
-    width: 1000px;
-    height: 100%;
-    margin-top: 1rem;
-    margin-right: 5rem;
-}
-
-/*--------------- BOX-1 -------------------*/
-.conteudo_perfil_resenha_livro .box-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-
-    width: 40%;
-    height: 100%;
-    
-    padding: 20px;
-}
-
-.conteudo_perfil_resenha_livro .box-1 img{
-    width: 66%;
-    height: auto;
-    object-fit: cover;
-    box-shadow: #363636 2px 8px 8px 2px;
-}
-
-.conteudo_perfil_resenha_livro .box-1 .avaliacao {
-    font-size: 25px;
-}
-
-.conteudo_perfil_resenha_livro .box-1 .frase {
-    font-size: 15px;
-    text-align: center;
-}
-
-/*--------------- BOX-2 -------------------*/
-.conteudo_perfil_resenha_livro .box-2{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-around;
-
-    width: 60%;
-    height: 100%;
-    margin-left: 10px;
-}
-
-.conteudo_perfil_resenha_livro .box-2 strong{
-    font-size: 30px;
-    color: var(--color-black);
-}
-
-.conteudo_perfil_resenha_livro .box-2 span{
-    font-size: 15px;
-    color: var(--color-black);
-    text-align: justify;
-}
-
-/* ----- SPAN - INFOS */
-
-.infos_livro{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-   
-}
-.links{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-#favoritar_livro{
-    background-color: var(--color-primary-laranja);
-    color: var(--color-black);
-
-    align-items: center;
-    justify-content: center;
-    padding: 4px 26px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0;
-}
-#ver_na_amazon{
-    background-color: var(--color-primary-azul);
-    color: var(--color-white);
-
-    align-items: center;
-    justify-content: center;
-    padding: 4px 15px;
-    border-radius: 5px;
-}
-
-#ver_na_amazon:hover, #favoritar_livro:hover{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    transition: all 0.2s ease-in-out;
-}
-
-.voltar{
-    align-self: flex-start;
-    justify-self: start;
-    margin-top: 10px;
-    text-decoration: none;
-    width: 85px;
-    
-}
-
-
-/* ------------------------------------------------------------------- CONTEÚDO - EXPLORAR -> ENTREVISTAS */
-
-.entrevistas{
-    background-color: var(--color-secondary-azul);
-}
-
-.conteudo_perfil_entrevistas{
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    height: 105%;
-
-    align-items: end;
-    justify-content: start;
-    overflow-y: auto;
-    padding: 0.5rem 2rem 1rem 1rem;
-    margin-right: 1rem;
-}
-
-.noticia{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    height: auto;
-    width: 950px;
-    background-color: var(--color-white);
-    color: var(--color-black);
-
-    margin-top: 1.5rem;
-    border-radius: 20px;
-    padding: 20px 30px;
-    text-align: justify;
-}
-
-.noticia img{
-    width: 250px;
-    height: 80%;
-    object-fit: cover;
-    padding-right: 20px;
-}
-
-.entrevista{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    width: 100%;
-}
-
-.entrevista a{
-    background-color: var(--color-primary-laranja);
-    color: var(--color-black);
-
-    align-items: center;
-    justify-content: center;
-    padding: 4px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0;
-}
-
-.entrevista a:hover{
-    background-color: var(--color-black);
-    color: var(--color-white);
-    transition: all 0.2s ease-in-out;  
-}
-
-.entrevista p{
-    font-size: 12px;
-}
-
-.entrevista strong{
-    font-size: 22px;
-}
-
-
-/* -------------------------------------------------------------------- CONTEÚDO : EXPLORAR -> QUIZ*/
-
-.conteudo_perfil_quiz{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: end;
-    align-items: center;
-    margin-right: 4.5rem;
-    margin-top: 3rem;
-}
-.conteudo_perfil_quiz .container {
-    background-color:var(--color-white);
-    width: 900px;
-    height: 400px;
-    margin-bottom: 50px;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: #363636 2px 8px 8px 2px;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .conteudo_perfil_quiz .questions-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-  
-  .conteudo_perfil_quiz .question{
-    font-size: 25px;
-    font-weight: bold;
-    text-align: justify;
-    color: var(--color-black);
-  }
-  
-  .conteudo_perfil_quiz .title {
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    color: var(--color-black);
-    margin-bottom: 2.5rem;
-  }
-  .conteudo_perfil_quiz .controls-container{
-    flex-direction: column;
-    display: flex;
-  }
-  .conteudo_perfil_quiz .answers-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  
-  .conteudo_perfil_quiz .answer:disabled {
-    cursor: not-allowed;
-  }
-  
-  .conteudo_perfil_quiz .next-question {
-    margin-top: 32px;
-  }
-
-  .conteudo_perfil_quiz .button:hover {
-    background-color: var(--color-primary-azul);
-    color: var(--color-white);
-  }
-
-  .conteudo_perfil_quiz .button {
-    background-color: var(--color-primary-laranja);
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-
-    border: 0;
-    border-radius: 6px;
-    height: 48px;
-    padding: 0 32px;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .conteudo_perfil_quiz .button:not(:disabled):hover {
-    filter: brightness(0.8);
-  }
-  
-  /* Finish game */
-  .conteudo_perfil_quiz .final-message {
-    font-size: 20px;
-    text-align: center;
-    color: var(--color-black);
-  }
-  
-  .conteudo_perfil_quiz .final-message span {
-    display: block;
-    margin-top: 8px;
-    color: var(--color-black);
-    font-size: 20px;
-    
-  }
-  
-  /* General styles */
-  .conteudo_perfil_quiz .hide {
-    display: none;
-  }
-  
-  .conteudo_perfil_quiz .correct {
-    background-color: #18c767;
-  }
-  
-  .conteudo_perfil_quiz .incorrect {
-    background-color:#838181;
-  }
-  
-  .conteudo_perfil_quiz .ranking{
-    margin-top: 8px;
-    color: var(--color-black);
-    font-size: 25px;
-  }

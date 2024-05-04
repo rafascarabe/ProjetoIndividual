@@ -1,0 +1,126 @@
+/* ----------------------------------------------------------------- MARK: CONTEÚDO - EXPLORAR -> RECOMENDAÇÃO */
+
+.body_explorar {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 850px;
+    
+}
+
+
+.recomendaçao{
+    background-color: var(--color-secondary-laranja);
+    justify-content: space-between;
+}
+
+.recomendaçao .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /*align-content: end; 
+    align-self: end;*/
+    width: auto;
+    height: 107%;
+    margin-right: 1.5rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.conteudo_perfil_recomendacao{
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    align-items: end;
+    align-self: flex-end;   
+    justify-content: start;
+    flex-direction: column;
+
+    margin-top: 1rem;
+    
+}
+
+.conteudo_perfil_categorias{
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    flex-direction: column;
+    justify-self: end;
+
+    margin-top: 1rem;
+    
+}
+
+.conteiner_recomendados{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    width: auto;
+    height: 255px;
+
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.conteiner_categorias{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+
+    width: auto;
+    height: 270px;
+
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.conteiner_recomendados .stand, .conteiner_categorias .stand{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.conteiner_recomendados .livro a, .conteiner_categorias .livro a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 130px;
+    height: 200px;
+
+    border-radius: 5px;
+    box-shadow: #dfdddd 0.5px 2px 2px 0.5px;
+    background-color: var(--color-white);
+    
+    
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 5px;
+}
+
+.conteiner_recomendados .livro a img, .conteiner_categorias .livro a img{
+    width: 80%;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: #363636 1px 4px 4px 1px;
+    margin-bottom: 8px;
+}
+
+.stand .livro strong, .stand .livro strong{
+    font-size: 12px;
+    color: var(--color-black);
+}
+.stand .livro p{
+    font-size: 10px;
+    color: var(--color-black);
+}
