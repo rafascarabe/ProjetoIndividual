@@ -1,12 +1,11 @@
 var usuarioModel = require("../models/usuarioModel");
-var aquarioModel = require("../models/aquarioModel");
 
 function autenticar(req, res) {
     var nomeUsuario = req.body.nomeUsuarioServer;
     var senha = req.body.senhaServer;
 
     if (nomeUsuario == undefined) {
-        res.status(400).send("Nome de Usuário undefined!");
+        res.status(400).send("Nome de Usuário indefinido!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {

@@ -1,3 +1,5 @@
+drop database if exists universoLITERARIO;
+
 create database universoLITERARIO;
 use universoLITERARIO;
 
@@ -26,7 +28,6 @@ INSERT INTO livro VALUES
 (null, 'Garotos Mortos Não Contam Segredos', 'Mark Miller','terror', 4.3),
 (null, 'As Vantagens de ser Invisível', 'Stephen Chbolsk','romance', 5.0);
 
-SELECT*FROM livro;
 
 -- --------------------------------------------------------------------------- USUARIO
 CREATE TABLE usuario (
@@ -35,12 +36,9 @@ nome VARCHAR(50),
 email VARCHAR(45) NOT NULL UNIQUE,
 telefone CHAR(9),
 nomeUsuario VARCHAR(30) NOT NULL UNIQUE,
-senha VARCHAR(30) NOT NULL,
-fkLIVRO INT,  
-	CONSTRAINT livro FOREIGN KEY (fkLIVRO) REFERENCES livro(idLivro)
+senha VARCHAR(30) NOT NULL
 ) AUTO_INCREMENT = 100;
 
-SELECT*FROM usuario;
 
 -- ----------------------------------------------------------------------- NEWSLETTER
 CREATE TABLE newsletter(
@@ -51,7 +49,6 @@ fkUSUARIO INT, -- não é obrigatório preencher
 	CONSTRAINT newsletter FOREIGN KEY (fkUSUARIO) REFERENCES usuario(id)
 );
 
-SELECT*FROM newsletter;
 
 -- -------------------------------------------------------------------------- QUIZ
 CREATE TABLE quiz (
@@ -61,9 +58,16 @@ pontuacao VARCHAR(45),
 	CONSTRAINT quiz FOREIGN KEY (fkUSUARIO) REFERENCES usuario(id)
 );
 
+
+CREATE TABLE favoritar (
+fkUsuario INT,  
+	CONSTRAINT usuario FOREIGN KEY (fkUsuario) REFERENCES usuario(id),
+fkLIVRO INT,  
+	CONSTRAINT livro FOREIGN KEY (fkLIVRO) REFERENCES livro(idLivro)
+);
+
+SELECT*FROM livro;
+SELECT*FROM usuario;
+SELECT*FROM newsletter;
 SELECT*FROM quiz;
-
-
-
-
-
+SELECT*FROM favoritar;
