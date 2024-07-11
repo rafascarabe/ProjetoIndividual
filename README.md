@@ -6,10 +6,10 @@
   &rarr; Documentação do projeto <br>
   &rarr; Modelagem de Dados + Script MSQ <br>
   &rarr; Analytics Métricas <br>
-  &rarr; API NodeJS (conectando Front com Banco de dados) <br>
+  &rarr; API Web-Data-Viz + NodeJS <br>
   &rarr; Website (com formulário de login/cadastro) <br>
   &rarr; Power Point (para apresentação final) <br>
-  ** <i>Estar alinhado com Objetivos Sustentáveis da ONU</i> [confira aqui: https://brasil.un.org/pt-br/sdgs ]
+  ** <i>Estar alinhado com os Objetivos Sustentáveis da ONU</i> [confira aqui: https://brasil.un.org/pt-br/sdgs ]
   
 <br><br>
 
